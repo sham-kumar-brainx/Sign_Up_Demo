@@ -29,5 +29,4 @@ extension CALayer {
             shadowPath = UIBezierPath(rect: rect).cgPath
         }
     }
-
 }

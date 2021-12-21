@@ -16,8 +16,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    
+}
+
+extension ViewController {
     @IBAction func btnSignUp(_ sender: UIButton) {
         print("Button Clicked!")
         let fName = userView.txfFirstName.text ?? ""
@@ -28,24 +29,24 @@ class ViewController: UIViewController {
 
 
         if fName.isEmpty || fName.isValidText {
-            showAlert(message: "Invalid First Name!\nIt must contain only Alphabats (A-Z or a-z).")
+            showAlertWithMsg(message: "Invalid First Name!\nIt must contain only Alphabats (A-Z or a-z).")
             return
         }
         if lName.isEmpty || lName.isValidText {
-            showAlert(message: "Invalid Last Name!\nIt must contain only Alphabats (A-Z or a-z).")
+            showAlertWithMsg(message: "Invalid Last Name!\nIt must contain only Alphabats (A-Z or a-z).")
             return
         }
         if email.isEmpty || !email.isValidEmail {
             print(email.isValidEmail)
-            showAlert(message: "Invalid Email!\nIt must be like abc@pqr.xyz etc.")
+            showAlertWithMsg(message: "Invalid Email!\nIt must be like abc@pqr.xyz etc.")
             return
         }
         if password.isEmpty || password.count < 8 {
-            showAlert(message: "Invalid Password! \n It must be more than 8 characters")
+            showAlertWithMsg(message: "Invalid Password! \n It must be more than 8 characters")
             return
         }
         if phoneNumber.isEmpty || !phoneNumber.isValidNumber {
-            showAlert(message: "Invalid Phone Number!\nIt must be of 9 to 11 digits")
+            showAlertWithMsg(message: "Invalid Phone Number!\nIt must be of 9 to 11 digits")
             return
         }
         let user = User(fName: fName, lName: lName, email: email, password: password, phoneNmbr: phoneNumber)
@@ -56,12 +57,11 @@ class ViewController: UIViewController {
         
     }
     
-    private func showAlert(message: String) {
+    private func showAlertWithMsg(message: String) {
         let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default ))
         self.present(alert, animated: true, completion: nil)
     }
-    
     
 }
 
