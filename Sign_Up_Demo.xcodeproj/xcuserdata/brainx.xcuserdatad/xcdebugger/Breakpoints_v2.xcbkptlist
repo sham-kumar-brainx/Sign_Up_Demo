@@ -14,9 +14,9 @@
             filePath = "Sign_Up_Demo/View/UserView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "UserView"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "SignUpView"
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>

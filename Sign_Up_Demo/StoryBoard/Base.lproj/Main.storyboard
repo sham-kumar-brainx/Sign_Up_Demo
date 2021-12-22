@@ -8,11 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sign_Up_Demo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Sign Up Page View" customClass="UserView" customModule="Sign_Up_Demo" customModuleProvider="target">
+                <viewController id="BYZ-38-t0r" customClass="SignUpViewController" customModule="Sign_Up_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Sign Up Page View" customClass="SignUpView" customModule="Sign_Up_Demo" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -203,7 +203,7 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="btnSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fQU-68-vz3"/>
+                                            <action selector="buttonSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y3k-eJ-Xkl"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By clicking Sign up, Continue with Facebook or Continue with Apple, you agree to our Terms and Conditions and Privacy Policy." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYE-VN-mot" userLabel="lblInstructions">
@@ -313,7 +313,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="c3u-Sb-ofo"/>
                     <connections>
-                        <outlet property="userView" destination="8bC-Xf-vdC" id="h1s-FM-M3N"/>
+                        <outlet property="SignUpView" destination="8bC-Xf-vdC" id="h1s-FM-M3N"/>
                         <segue destination="oVq-ri-xfN" kind="show" identifier="detailViewController" id="O9Q-X1-Xdc"/>
                     </connections>
                 </viewController>

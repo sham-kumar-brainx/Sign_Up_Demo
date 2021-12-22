@@ -1,13 +1,6 @@
-//
-//  CALayerExtentions.swift
-//  Sign_Up_Demo
-//
-//  Created by BrainX IOS on 21/12/2021.
-//
-
 import UIKit
-
 extension CALayer {
+    // MARK: Methods
     func applySketchShadow(
         color: UIColor = .black,
         alpha: Float = 0.5,
