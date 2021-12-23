@@ -1,5 +1,7 @@
 import UIKit
+
 extension CALayer {
+    
     // MARK: Methods
     func applySketchShadow(
         color: UIColor = .black,

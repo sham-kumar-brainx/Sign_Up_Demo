@@ -13,6 +13,8 @@
 		D98F20612771FB98001C41D8 /* StringExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F20602771FB98001C41D8 /* StringExtentions.swift */; };
 		D991E7D1277341E6008752B7 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D991E7D0277341E6008752B7 /* AppConstants.swift */; };
 		D991E7D3277346F1008752B7 /* UIAlertControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D991E7D2277346F1008752B7 /* UIAlertControllerExtention.swift */; };
+		D992AB1A27745D9700903EDC /* TextFieldValidationEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D992AB1627745D9700903EDC /* TextFieldValidationEnum.swift */; };
+		D992AB1E2774AE0000903EDC /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D992AB1D2774AE0000903EDC /* UIStoryboard.swift */; };
 		D992C04D276A4FC0009FB111 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D992C04C276A4FC0009FB111 /* AppDelegate.swift */; };
 		D992C04F276A4FC0009FB111 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D992C04E276A4FC0009FB111 /* SceneDelegate.swift */; };
 		D992C051276A4FC0009FB111 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D992C050276A4FC0009FB111 /* SignUpViewController.swift */; };
@@ -50,6 +52,8 @@
 		D98F20602771FB98001C41D8 /* StringExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtentions.swift; sourceTree = "<group>"; };
 		D991E7D0277341E6008752B7 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		D991E7D2277346F1008752B7 /* UIAlertControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtention.swift; sourceTree = "<group>"; };
+		D992AB1627745D9700903EDC /* TextFieldValidationEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldValidationEnum.swift; sourceTree = "<group>"; };
+		D992AB1D2774AE0000903EDC /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		D992C049276A4FC0009FB111 /* Sign_Up_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sign_Up_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D992C04C276A4FC0009FB111 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D992C04E276A4FC0009FB111 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 				D98F205E2771FB65001C41D8 /* CALayerExtentions.swift */,
 				D98F20602771FB98001C41D8 /* StringExtentions.swift */,
 				D991E7D2277346F1008752B7 /* UIAlertControllerExtention.swift */,
+				D992AB1D2774AE0000903EDC /* UIStoryboard.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -118,6 +123,15 @@
 				D991E7D0277341E6008752B7 /* AppConstants.swift */,
 			);
 			path = Global;
+			sourceTree = "<group>";
+		};
+		D992AB1427745D9700903EDC /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				D992AB1627745D9700903EDC /* TextFieldValidationEnum.swift */,
+			);
+			name = Enums;
+			path = "../../spiritual-care-ios/SCR/Enums";
 			sourceTree = "<group>";
 		};
 		D992C040276A4FC0009FB111 = {
@@ -143,6 +157,7 @@
 		D992C04B276A4FC0009FB111 /* Sign_Up_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				D992AB1427745D9700903EDC /* Enums */,
 				D991E7CF277341B9008752B7 /* Global */,
 				D98F205B2771F778001C41D8 /* Extentions */,
 				D98F20562771BE95001C41D8 /* StoryBoard */,
@@ -355,10 +370,12 @@
 				D991E7D3277346F1008752B7 /* UIAlertControllerExtention.swift in Sources */,
 				D98F20612771FB98001C41D8 /* StringExtentions.swift in Sources */,
 				D992C04D276A4FC0009FB111 /* AppDelegate.swift in Sources */,
+				D992AB1A27745D9700903EDC /* TextFieldValidationEnum.swift in Sources */,
 				D98F205D2771FABF001C41D8 /* ColorExtentions.swift in Sources */,
 				D98F205F2771FB65001C41D8 /* CALayerExtentions.swift in Sources */,
 				D992C04F276A4FC0009FB111 /* SceneDelegate.swift in Sources */,
 				D991E7D1277341E6008752B7 /* AppConstants.swift in Sources */,
+				D992AB1E2774AE0000903EDC /* UIStoryboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

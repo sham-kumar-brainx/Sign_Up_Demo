@@ -1,5 +1,7 @@
 import UIKit
+
 class SignUpView: UIView {
+    
     // MARK: Outlets
     @IBOutlet weak var btnFbSignUp: UIButton!
     @IBOutlet weak var btnAppleSignUp: UIButton!
@@ -18,8 +20,10 @@ class SignUpView: UIView {
         createSubviews()
     }
 }
+
 // MARK: Extention for SignUpView which extend its functionalites
 extension SignUpView {
+    
     // MARK: Private Methods
     private func createSubviews() {
         txfPhone.borderStyle = UITextField.BorderStyle.none
@@ -31,6 +35,7 @@ extension SignUpView {
         designButton(button: btnSignUp, backgroundColor: AppConstants.orangeColorHex, cornerRadius: 4, shadowColor: AppConstants.darkGreyColorHex, opacity: 0.33, x: 0, y: 3, blur: 16)
         customizeLabel(label: lblInstructions)
     }
+    
     private func designButton(
         button: UIButton,
         backgroundColor: String,
@@ -49,6 +54,7 @@ extension SignUpView {
         let color: UIColor = UIColor.hexStringToUIColor(hex: shadowColor)
         button.layer.applySketchShadow(color: color, alpha: opacity, x: x, y: y, blur: blur, spread: spread)
     }
+    
     private func customizeLabel(label: UILabel) {
         var mutableString = NSMutableAttributedString()
         let style = NSMutableParagraphStyle()

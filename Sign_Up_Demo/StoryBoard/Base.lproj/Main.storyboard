@@ -313,7 +313,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="c3u-Sb-ofo"/>
                     <connections>
-                        <outlet property="SignUpView" destination="8bC-Xf-vdC" id="h1s-FM-M3N"/>
+                        <outlet property="signUpView" destination="8bC-Xf-vdC" id="h1s-FM-M3N"/>
                         <segue destination="oVq-ri-xfN" kind="show" identifier="detailViewController" id="O9Q-X1-Xdc"/>
                     </connections>
                 </viewController>
@@ -321,10 +321,10 @@
             </objects>
             <point key="canvasLocation" x="918.2242990654205" y="82.937365010799141"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--UserDetailViewController-->
         <scene sceneID="Cco-Je-ap3">
             <objects>
-                <viewController storyboardIdentifier="userDetailview" id="oVq-ri-xfN" userLabel="Detail View Controller" customClass="UserDetailViewController" customModule="Sign_Up_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserDetailViewController" id="oVq-ri-xfN" userLabel="UserDetailViewController" customClass="UserDetailViewController" customModule="Sign_Up_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IhQ-4f-zPf">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
