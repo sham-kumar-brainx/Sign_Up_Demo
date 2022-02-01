@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D95933B027A923A200A2D9EA /* TextFieldValidationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95933AF27A923A200A2D9EA /* TextFieldValidationStatus.swift */; };
+		D95933B227A92CA200A2D9EA /* LocalizedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95933B127A92CA200A2D9EA /* LocalizedKey.swift */; };
+		D95933B427A92D4D00A2D9EA /* PidenBienMainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95933B327A92D4D00A2D9EA /* PidenBienMainScreenView.swift */; };
+		D95933B627A93DE900A2D9EA /* PidenBienViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95933B527A93DE900A2D9EA /* PidenBienViewController.swift */; };
 		D98F205A2771EAAA001C41D8 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F20592771EAAA001C41D8 /* SignUpView.swift */; };
 		D98F205D2771FABF001C41D8 /* ColorExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F205C2771FABF001C41D8 /* ColorExtentions.swift */; };
 		D98F205F2771FB65001C41D8 /* CALayerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F205E2771FB65001C41D8 /* CALayerExtentions.swift */; };
@@ -47,6 +50,9 @@
 
 /* Begin PBXFileReference section */
 		D95933AF27A923A200A2D9EA /* TextFieldValidationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidationStatus.swift; sourceTree = "<group>"; };
+		D95933B127A92CA200A2D9EA /* LocalizedKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedKey.swift; sourceTree = "<group>"; };
+		D95933B327A92D4D00A2D9EA /* PidenBienMainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PidenBienMainScreenView.swift; sourceTree = "<group>"; };
+		D95933B527A93DE900A2D9EA /* PidenBienViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PidenBienViewController.swift; sourceTree = "<group>"; };
 		D98F20592771EAAA001C41D8 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		D98F205C2771FABF001C41D8 /* ColorExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtentions.swift; sourceTree = "<group>"; };
 		D98F205E2771FB65001C41D8 /* CALayerExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayerExtentions.swift; sourceTree = "<group>"; };
@@ -99,6 +105,7 @@
 		D95933AE27A9238300A2D9EA /* Enum */ = {
 			isa = PBXGroup;
 			children = (
+				D95933B127A92CA200A2D9EA /* LocalizedKey.swift */,
 				D95933AF27A923A200A2D9EA /* TextFieldValidationStatus.swift */,
 			);
 			path = Enum;
@@ -190,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				D98F20592771EAAA001C41D8 /* SignUpView.swift */,
+				D95933B327A92D4D00A2D9EA /* PidenBienMainScreenView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,6 +215,7 @@
 			children = (
 				D992C050276A4FC0009FB111 /* SignUpViewController.swift */,
 				D9C1923827707B770077C782 /* UserDetailViewController.swift */,
+				D95933B527A93DE900A2D9EA /* PidenBienViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -365,7 +374,9 @@
 				D9C1923727706AD00077C782 /* User.swift in Sources */,
 				D9C1923927707B770077C782 /* UserDetailViewController.swift in Sources */,
 				D992C051276A4FC0009FB111 /* SignUpViewController.swift in Sources */,
+				D95933B227A92CA200A2D9EA /* LocalizedKey.swift in Sources */,
 				D98F205A2771EAAA001C41D8 /* SignUpView.swift in Sources */,
+				D95933B627A93DE900A2D9EA /* PidenBienViewController.swift in Sources */,
 				D991E7D3277346F1008752B7 /* UIAlertControllerExtention.swift in Sources */,
 				D98F20612771FB98001C41D8 /* StringExtentions.swift in Sources */,
 				D992C04D276A4FC0009FB111 /* AppDelegate.swift in Sources */,
@@ -375,6 +386,7 @@
 				D992C04F276A4FC0009FB111 /* SceneDelegate.swift in Sources */,
 				D991E7D1277341E6008752B7 /* AppConstants.swift in Sources */,
 				D992AB1E2774AE0000903EDC /* UIStoryboard.swift in Sources */,
+				D95933B427A92D4D00A2D9EA /* PidenBienMainScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
