@@ -21,7 +21,7 @@ class PidenBienMainScreenView: UIView {
         topView.clipsToBounds = true
         topView.layer.cornerRadius = 40
         topView.layer.maskedCorners = [.layerMaxXMaxYCorner]
-        topView.layer.applySketchShadow(color: UIColor.hexStringToUIColor(hex: AppConstants.topViewShadowColor), alpha: 0.2, x: 0, y: 3, blur: 4)
+        topView.layer.applySketchShadow(color: UIColor.hexStringToUIColor(hex: AppConstants.topViewShadowColorHex), alpha: 0.2, x: 0, y: 3, blur: 4)
     }
     
     private func customizeLabel(label: UILabel) {
