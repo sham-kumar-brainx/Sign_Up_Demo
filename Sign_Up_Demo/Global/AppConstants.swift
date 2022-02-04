@@ -12,7 +12,7 @@ struct AppConstants {
     static let LightBrownColorHex = "#787878"
     static let topViewShadowColorHex = "#5656561A"
     static let lightGreenColorHex = "#D5EAE3"
-    static let BoskiTypeColorHex = "#F0EBE0"
+    static let boskiTypeColorHex = "#F0EBE0"
     
     
     static let firstNameInavlidMessage = "Invalid First Name!\nIt must contain only Alphabats (A-Z or a-z)."

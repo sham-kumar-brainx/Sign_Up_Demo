@@ -7,7 +7,11 @@ class PidenBienMainScreenView: UIView {
     @IBOutlet weak var greetings: UILabel!
     @IBOutlet weak var deliveryTitle: UILabel!
     @IBOutlet weak var deliveryDescription: UILabel!
+    @IBOutlet weak var view1: XibDemo!
+    @IBOutlet weak var view2: XibDemo!
+    @IBOutlet weak var view3: XibDemo!
     
+
     override func awakeFromNib() {
         super.awakeFromNib()
         configure()
@@ -31,6 +35,10 @@ class PidenBienMainScreenView: UIView {
         mutableString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.hexStringToUIColor(hex: AppConstants.darkBlueColorHex), range: NSRange(location: 0,length: 4))
         mutableString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.hexStringToUIColor(hex: AppConstants.LightBrownColorHex), range: NSRange(location: 4, length: mutableString.length - 4))
         label.attributedText = mutableString
+        topView.backgroundColor = .white
+        view1.setInnerViewColor(colorHex: AppConstants.lightGreenColorHex)
+        view2.setInnerViewColor(colorHex: AppConstants.boskiTypeColorHex)
+        view3.setInnerViewColor(colorHex: AppConstants.lightGreenColorHex)
     }
     
 }
