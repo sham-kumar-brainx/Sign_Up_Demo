@@ -18,7 +18,8 @@ class PidenBienMainScreenView: UIView {
     @IBOutlet weak var hsv3Item2: ItemView!
     @IBOutlet weak var hsv4Item1: ItemView!
     @IBOutlet weak var hsv4Item2: ItemView!
-
+    @IBOutlet weak var cartButtonView: UIView!
+    
     // MARK: - Life Cycle Methods
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,7 +40,6 @@ class PidenBienMainScreenView: UIView {
         view1.setInnerViewColor(colorHex: AppConstants.lightGreenColorHex)
         view2.setInnerViewColor(colorHex: AppConstants.boskiTypeColorHex)
         view3.setInnerViewColor(colorHex: AppConstants.lightGreenColorHex)
-        
         hsv1Item1.setButtonWith(title: AppConstants.food)
         hsv1Item1.setBackgroundWith(image: AppConstants.food)
         hsv1Item2.setButtonWith(title: AppConstants.superMarket)
@@ -56,6 +56,7 @@ class PidenBienMainScreenView: UIView {
         hsv4Item1.setBackgroundWith(image: AppConstants.personalCare)
         hsv4Item2.setButtonWith(title: AppConstants.mall)
         hsv4Item2.setBackgroundWith(image: AppConstants.mall)
+        cartButtonView.layer.cornerRadius = 24
     }
     
     private func customizeLabel(label: UILabel) {
