@@ -9,5 +9,7 @@ enum LocalizedKey: String {
     case greetings = "Good afternoon,Miguel"
     case deliveryTitle = "Delivery to Door"
     case deliverDescription = "ASAP - 18 New Avenida SO, San"
-
+    case title = "NICELY NONDAIRY"
+    case subTitle = "Say yes to sips of"
+    case orderingMessage = "What do you ordering today?"
 }

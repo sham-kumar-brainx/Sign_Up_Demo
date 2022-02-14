@@ -10,6 +10,16 @@ import UIKit
 
 extension UIView {
     
+    @IBInspectable
+    var viewCornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+        }
+    }
+    
     @discardableResult
     func loadFromNib<T : UIView>() -> T? {
         let bundle = Bundle(for: type(of: self))

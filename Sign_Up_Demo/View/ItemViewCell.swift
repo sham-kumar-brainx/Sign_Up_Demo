@@ -1,14 +1,14 @@
 import Foundation
 import UIKit
 
-class ItemView: UIView {
+class ItemViewCell: UICollectionViewCell {
     
     // MARK: Outlets
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var imageLabel: UILabel!
     
     // MARK: - Variables
-    let nibName = "ItemView"
+    let nibName = "ItemViewCell"
     
     // MARK: - Init Methods
     override init(frame: CGRect) {
@@ -37,7 +37,6 @@ class ItemView: UIView {
     // MARK: - Private Methods
     private func configureView(){
         imageLabel.layer.cornerRadius = 10
-//        imageLabel.titleLabel?.font = UIFont(name: "Georgia", size: 11.0)
     }
     
     // MARK: - Internal Methods

@@ -3,8 +3,11 @@ import UIKit
 
 class XibDemo: UIView {
     
-    // MARK: Outlets
+    // MARK: - Outlets
     @IBOutlet var innerView: UIView!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var subTitle: UILabel!
+    @IBOutlet weak var itemImage: UIImageView!
     
     // MARK: - Variables
     let nibName = "XibDemo"
@@ -20,6 +23,11 @@ class XibDemo: UIView {
         commonInit()
     }
     
+    // MARK: - Private Methods
+    private func configureView() {
+        innerView.layer.cornerRadius = 10
+    }
+    
     func commonInit() {
         guard let view = loadViewFromNib() else { return }
         view.frame = self.bounds
@@ -33,12 +41,20 @@ class XibDemo: UIView {
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
     
-    func setInnerViewColor(colorHex: String){
+    // MARK: - Internal Methods
+    func setInnerViewColor(colorHex: String) {
         innerView.backgroundColor = UIColor.hexStringToUIColor(hex: colorHex)
     }
     
-    // MARK: - Private Methods
-    private func configureView(){
-        innerView.layer.cornerRadius = 10
+    func setItemWith(title: String) {
+        self.title.text = title
+    }
+    
+    func setItemWith(subTitle: String) {
+        self.subTitle.text = subTitle
+    }
+
+    func setItemWith(image: String) {
+        itemImage.image = UIImage(named: image)
     }
 }
