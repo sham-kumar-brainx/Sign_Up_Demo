@@ -20,13 +20,4 @@ struct AppConstants {
     static let phoneInvalidMessage = "Invalid Phone Number!\nIt must be of 9 to 11 digits"
     static let alertTitle = "Alert"
     static let alertActionOk = "OK"
-    static let food = "Food"
-    static let superMarket = "Super Market"
-    static let alcoholDelivery = "Alcohol Delivery"
-    static let pets = "Pets"
-    static let pharmacy = "Pharmacy"
-    static let flowersAndGifts = "Flowers and Gifts"
-    static let personalCare = "Personal Care"
-    static let mall = "Mall"
-    static let cupGlass = "Cup Glass"
 }
