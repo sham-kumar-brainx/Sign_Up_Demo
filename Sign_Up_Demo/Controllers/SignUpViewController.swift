@@ -57,7 +57,7 @@ extension SignUpViewController {
     }
     
     private func proceedToUserDetailViewController() {
-        let userDetailViewController = UIViewController.instantiate(UserDetailViewController.self, fromStoryboard: .Main)
+        let userDetailViewController = UIViewController.instantiate(UserDetailViewController.self, fromStoryboard: .main)
         userDetailViewController.details = user?.description
         self.present(userDetailViewController, animated:true, completion:nil)
     }

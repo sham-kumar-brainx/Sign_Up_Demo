@@ -5,6 +5,7 @@ class PidenBienViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var verticalCollectionView: UICollectionView!
     @IBOutlet weak var horizentalCollectionView: UICollectionView!
+    @IBOutlet var pideBienMainScreenView: PidenBienMainScreenView!
     
     // MARK: - Private Properties
     private let horizentalItemListData = PideBienViewModel().horizentalItemList
@@ -17,6 +18,7 @@ class PidenBienViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         setDelegateAndDatasource()
+        pideBienMainScreenView.cartButtonView.addTapAction(#selector(playButtonTapped(_:)), target: self)
     }
     
     // MARK: - Private Methods
@@ -25,6 +27,19 @@ class PidenBienViewController: UIViewController {
         horizentalCollectionView.dataSource = self
         verticalCollectionView.delegate = self
         verticalCollectionView.dataSource = self
+    }
+    
+    private func openCustomPideBienViewController() {
+        let customPideBienViewController = CustomPideBienViewController.instantiate(from: .main)
+        customPideBienViewController.modalPresentationStyle = .fullScreen
+        customPideBienViewController.modalTransitionStyle = .crossDissolve
+        present(customPideBienViewController, animated: true)
+    }
+    
+    // MARK: - Action Methods
+    @objc
+    func playButtonTapped(_ sender: UITapGestureRecognizer) {
+        openCustomPideBienViewController()
     }
 }
 

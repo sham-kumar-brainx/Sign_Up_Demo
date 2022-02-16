@@ -1,13 +1,6 @@
-//
-//  UIView.swift
-//  Sign_Up_Demo
-//
-//  Created by BrainX IOS on 03/02/2022.
-//
-
-import Foundation
 import UIKit
 
+// MARK: Extenstion for UIView
 extension UIView {
     
     @IBInspectable
@@ -30,5 +23,12 @@ extension UIView {
             return nil
         }
         return contentView
+    }
+    
+    // MARK: Internal Methods
+    func addTapAction(_ action: Selector, target: Any? = nil) {
+        let tapGesture = UITapGestureRecognizer(target: target ?? self, action: action)
+        tapGesture.cancelsTouchesInView = false
+        addGestureRecognizer(tapGesture)
     }
 }

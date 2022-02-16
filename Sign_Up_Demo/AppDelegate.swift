@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Sign_Up_Demo
-//
-//  Created by BrainX IOS on 15/12/2021.
-//
-
 import UIKit
 
 @main
