@@ -1,12 +1,12 @@
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: BaseViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var signUpView: SignUpView!
     
     // MARK: - Private Properties
-    var user: User?
+    private var user: User?
 }
 
 // MARK: - Extention
@@ -67,13 +67,13 @@ extension SignUpViewController {
     private func proceedToUserDetailViewController() {
         let userDetailViewController = UIViewController.instantiate(UserDetailViewController.self, fromStoryboard: .main)
         userDetailViewController.details = user?.description
-        self.present(userDetailViewController, animated:true, completion:nil)
+        navigationController?.pushViewController(userDetailViewController, animated: true)
     }
     
     private func pideBienMainScreen() {
         let customPideBienViewController = CustomPideBienViewController.instantiate(from: .main)
         customPideBienViewController.modalPresentationStyle = .fullScreen
         customPideBienViewController.modalTransitionStyle = .crossDissolve
-        present(customPideBienViewController, animated: true)
+        navigationController?.pushViewController(customPideBienViewController, animated: true)
     }
 }

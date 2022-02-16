@@ -1,6 +1,6 @@
 import UIKit
 
-class UserDetailViewController: UIViewController {
+class UserDetailViewController: BaseViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var textView: UITextView!
@@ -9,8 +9,8 @@ class UserDetailViewController: UIViewController {
     var details: String?
     
     // MARK: - Lifecycle Methods
-    override func viewWillAppear(_ animated: Bool) {
-      super.viewWillAppear(animated)
-      textView.text = details
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        textView.text = details
     }
 }

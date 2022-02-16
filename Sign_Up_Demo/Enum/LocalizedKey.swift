@@ -22,4 +22,5 @@ enum LocalizedKey: String {
     case personalCare = "Personal Care"
     case mall = "Mall"
     case cupGlass = "Cup Glass"
+    case orientation = "orientation"
 }

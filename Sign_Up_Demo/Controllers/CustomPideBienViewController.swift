@@ -1,6 +1,6 @@
 import UIKit
 
-class CustomPideBienViewController: UIViewController {
+class CustomPideBienViewController: BaseViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
@@ -23,7 +23,7 @@ class CustomPideBienViewController: UIViewController {
         return layout
     }()
     
-    // MARK: - View Lifecycle
+    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCollectionView()
