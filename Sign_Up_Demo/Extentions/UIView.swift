@@ -1,6 +1,6 @@
 import UIKit
 
-// MARK: Extenstion for UIView
+// MARK: - Extenstion for UIView
 extension UIView {
     
     @IBInspectable
@@ -25,7 +25,7 @@ extension UIView {
         return contentView
     }
     
-    // MARK: Internal Methods
+    // MARK: - Internal Methods
     func addTapAction(_ action: Selector, target: Any? = nil) {
         let tapGesture = UITapGestureRecognizer(target: target ?? self, action: action)
         tapGesture.cancelsTouchesInView = false

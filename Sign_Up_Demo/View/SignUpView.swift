@@ -2,7 +2,7 @@ import UIKit
 
 class SignUpView: UIView {
     
-    // MARK: Outlets
+    // MARK: - Outlets
     @IBOutlet weak var btnFbSignUp: UIButton!
     @IBOutlet weak var btnAppleSignUp: UIButton!
     @IBOutlet weak var btnSignUp: UIButton!
@@ -14,7 +14,7 @@ class SignUpView: UIView {
     @IBOutlet weak var phoneView: UIView!
     @IBOutlet weak var lblInstructions: UILabel!
     
-    // MARK: Lifecycle Methods
+    // MARK: - Lifecycle Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         createSubviews()
@@ -24,7 +24,7 @@ class SignUpView: UIView {
 // MARK: Extention for SignUpView which extend its functionalites
 extension SignUpView {
     
-    // MARK: Private Methods
+    // MARK: - Private Methods
     private func createSubviews() {
         txfPhone.borderStyle = UITextField.BorderStyle.none
         phoneView.layer.borderWidth = 0.5

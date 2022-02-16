@@ -1,5 +1,6 @@
 import UIKit
 
+// MARK: - Extenstion for UIColor
 extension UIColor {
     
     // MARK: - Class Methods

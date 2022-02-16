@@ -6,19 +6,6 @@ class VerticalCollectionCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageTitle: UILabel!
     
-    // MARK: - Internal Properties
-    var cornerRadius: CGFloat = 0 {
-        didSet {
-            if cornerRadius > 0 {
-                imageView.viewCornerRadius = cornerRadius
-                imageView.clipsToBounds = true
-                imageView.layer.masksToBounds = true
-            } else {
-                imageView.viewCornerRadius = 0
-            }
-        }
-    }
-    
     // MARK: - Life Cycle Methods
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,5 +25,10 @@ class VerticalCollectionCell: UICollectionViewCell {
     
     func setImage(with title: String) {
         imageTitle.text = title
+    }
+    
+    func setCellData(with model: VerticalScrollItemList) {
+        imageView.image = UIImage(named: model.itemImage)
+        imageTitle.text = model.title
     }
 }

@@ -1,9 +1,9 @@
 import UIKit
 
-// MARK: Extenstion for UIStoryboard
+// MARK: - Extenstion for UIStoryboard
 extension UIStoryboard {
     
-    // MARK: Enum for Storyboard Screens
+    // MARK: - Enum for Storyboard Screens
     enum Name: String {
         case launchScreen = "LaunchScreen"
         case main = "Main"

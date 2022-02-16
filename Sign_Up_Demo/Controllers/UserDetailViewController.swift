@@ -2,13 +2,13 @@ import UIKit
 
 class UserDetailViewController: UIViewController {
     
-    // MARK: Outlets
+    // MARK: - Outlets
     @IBOutlet weak var textView: UITextView!
     
-    // MARK: Properties
+    // MARK: - Internal Properties
     var details: String?
     
-    // MARK: Lifecycle Methods
+    // MARK: - Lifecycle Methods
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
       textView.text = details

@@ -36,4 +36,11 @@ class HorizontalCollectionCell: UICollectionViewCell {
     func setItemWith(image: String) {
         itemImage.image = UIImage(named: image)
     }
+    
+    func setCellData(with model: HorizentalScrollItemList) {
+        innerView.backgroundColor = UIColor.hexStringToUIColor(hex: model.innerViewColorHex)
+        title.text = model.title
+        subTitle.text = model.subTitle
+        itemImage.image = UIImage(named: model.itemImage)
+    }
 }
