@@ -13,6 +13,7 @@ struct AppConstants {
     static let topViewShadowColorHex = "#5656561A"
     static let lightGreenColorHex = "#D5EAE3"
     static let boskiTypeColorHex = "#F0EBE0"
+    static let lineColorHex = "#CCCCCC"
     static let firstNameInavlidMessage = "Invalid First Name!\nIt must contain only Alphabats (A-Z or a-z)."
     static let lastNameInavlidMessage = "Invalid Last Name!\nIt must contain only Alphabats (A-Z or a-z)."
     static let emailInvalidMessage = "Invalid Email!\nIt must be like abc@pqr.xyz etc."
