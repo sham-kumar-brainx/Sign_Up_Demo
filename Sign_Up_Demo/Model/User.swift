@@ -2,7 +2,7 @@ import Foundation
 
 struct User {
     
-    // MARK: - Varaibles and Properties
+    // MARK: - Internal Properties
     var firstName: String
     var lastName: String
     var email: String

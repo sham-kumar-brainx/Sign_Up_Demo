@@ -6,7 +6,7 @@ class VerticalCollectionCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageTitle: UILabel!
     
-    // MARK: - Life Cycle Methods
+    // MARK: - LifeCycle Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         configure()

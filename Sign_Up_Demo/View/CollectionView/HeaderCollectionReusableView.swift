@@ -5,7 +5,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     // MARK: - Outlets
     @IBOutlet weak var label: UILabel!
     
-    // MARK: - Life Cycle Methods
+    // MARK: - LifeCycle Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         label.text = LocalizedKey.orderingMessage.string

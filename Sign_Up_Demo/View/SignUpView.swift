@@ -61,7 +61,7 @@ extension SignUpView {
         mutableString = NSMutableAttributedString(string: lblInstructions.text ?? "", attributes: [NSAttributedString.Key.font:UIFont(name: "Georgia", size: 12.0)!])
         mutableString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.hexStringToUIColor(hex: AppConstants.orangeColorHex), range: NSRange(location:110,length:14))
         mutableString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.hexStringToUIColor(hex: AppConstants.orangeColorHex), range: NSRange(location:85,length:20))
-        style.lineSpacing = 10 // change line spacing between paragraph like 36 or 48
+        style.lineSpacing = 10
         style.alignment = .center
         mutableString.addAttribute(NSAttributedString.Key.paragraphStyle, value: style, range: NSRange(location: 0, length: label.text?.count ?? 0))
         label.attributedText = mutableString

@@ -45,7 +45,6 @@
 		D9C1923727706AD00077C782 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C1923627706AD00077C782 /* User.swift */; };
 		D9C1923927707B770077C782 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C1923827707B770077C782 /* UserDetailViewController.swift */; };
 		D9F2A50127BD360E00005658 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F2A50027BD360E00005658 /* BaseViewController.swift */; };
-		D9F2A50327BD366C00005658 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F2A50227BD366C00005658 /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +107,6 @@
 		D9C1923627706AD00077C782 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D9C1923827707B770077C782 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		D9F2A50027BD360E00005658 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		D9F2A50227BD366C00005658 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +180,6 @@
 		D991E7CF277341B9008752B7 /* Global */ = {
 			isa = PBXGroup;
 			children = (
-				D9F2A50227BD366C00005658 /* Helpers.swift */,
 				D991E7D0277341E6008752B7 /* AppConstants.swift */,
 			);
 			path = Global;
@@ -450,7 +447,6 @@
 				D9F2A50127BD360E00005658 /* BaseViewController.swift in Sources */,
 				D95933B227A92CA200A2D9EA /* LocalizedKey.swift in Sources */,
 				D9B5112B27BCC20B0065F19D /* VerticalCollectionCell.swift in Sources */,
-				D9F2A50327BD366C00005658 /* Helpers.swift in Sources */,
 				D9B5113527BCDD200065F19D /* HorizontalCollectionCell.swift in Sources */,
 				D98F205A2771EAAA001C41D8 /* SignUpView.swift in Sources */,
 				D97F2AF127BA3BB000F31F88 /* ScrollItems.swift in Sources */,
@@ -666,7 +662,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -694,7 +690,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

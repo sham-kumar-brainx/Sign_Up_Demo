@@ -7,7 +7,6 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         disableDarkMode()
         navigationController?.interactivePopGestureRecognizer?.delegate = self
-        setOrientation()
     }
     
     // MARK: - Private Methods
@@ -15,10 +14,5 @@ class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
         if #available(iOS 13.0, *) {
             overrideUserInterfaceStyle = .light
         }
-    }
-    
-    private func setOrientation() {
-        Helpers.lockOrientation(UIInterfaceOrientationMask.portrait,
-                                andRotateTo: UIInterfaceOrientation.portrait)
     }
 }

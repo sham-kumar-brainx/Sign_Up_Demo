@@ -2,7 +2,7 @@ import UIKit
 
 class FooterCollectionReuseableView: UICollectionReusableView {
 
-    // MARK: - Life Cycle Methods
+    // MARK: - LifeCycle Methods
     override func awakeFromNib() {
         super.awakeFromNib()
     }

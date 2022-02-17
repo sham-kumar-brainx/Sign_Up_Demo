@@ -1,6 +1,6 @@
 import UIKit
 
-// MARK: - Extenstion for UITableViewCell
+// MARK: - Extenstion for UICollectionReusableView
 extension UICollectionReusableView {
     
     // MARK: - Static Properties

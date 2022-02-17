@@ -9,7 +9,7 @@ class PidenBienMainScreenView: UIView {
     @IBOutlet weak var deliveryDescription: UILabel!
     @IBOutlet weak var cartButtonView: UIView!
     
-    // MARK: - Life Cycle Methods
+    // MARK: - LifeCycle Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         configure()
@@ -37,5 +37,4 @@ class PidenBienMainScreenView: UIView {
         mutableString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.hexStringToUIColor(hex: AppConstants.LightBrownColorHex), range: NSRange(location: 4, length: mutableString.length - 4))
         label.attributedText = mutableString
     }
-    
 }
