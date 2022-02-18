@@ -8,6 +8,7 @@ class PidenBienMainScreenView: UIView {
     @IBOutlet weak var deliveryTitle: UILabel!
     @IBOutlet weak var deliveryDescription: UILabel!
     @IBOutlet weak var cartButtonView: UIView!
+    @IBOutlet weak var sideMenuLogo: UIButton!
     
     // MARK: - LifeCycle Methods
     override func awakeFromNib() {

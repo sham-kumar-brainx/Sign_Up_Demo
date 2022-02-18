@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -35,7 +34,6 @@
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="B9C-6L-LxQ"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Jmo-5g-MY5" firstAttribute="centerY" secondItem="B9C-6L-LxQ" secondAttribute="centerY" id="Prf-oi-Dvr"/>
                 <constraint firstItem="B9C-6L-LxQ" firstAttribute="trailing" secondItem="Jmo-5g-MY5" secondAttribute="trailing" constant="16" id="ZQU-Ct-DI8"/>
@@ -48,8 +46,5 @@
     </objects>
     <resources>
         <image name="forward" width="24" height="24"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

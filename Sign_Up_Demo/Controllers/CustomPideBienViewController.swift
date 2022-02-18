@@ -3,6 +3,7 @@ import UIKit
 class CustomPideBienViewController: BaseViewController {
     
     // MARK: - Outlets
+    @IBOutlet var pidebienMainScreenView: PidenBienMainScreenView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Private Properties
@@ -27,6 +28,11 @@ class CustomPideBienViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCollectionView()
+    }
+    
+    // MARK: - Action Methods
+    @IBAction func sideMenuImageTaped(_ sender: UIButton) {
+        revealViewController()?.revealSideMenu()
     }
     
     // MARK: - Private Methods
