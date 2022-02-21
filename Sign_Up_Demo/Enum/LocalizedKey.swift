@@ -32,4 +32,5 @@ enum LocalizedKey: String {
     case shops = "Shops"
     case settings = "Settings"
     case forward = "Forward"
+    case cross = "Cross"
 }
