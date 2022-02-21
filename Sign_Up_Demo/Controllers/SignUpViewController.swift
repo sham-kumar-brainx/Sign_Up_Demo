@@ -71,9 +71,9 @@ extension SignUpViewController {
     }
     
     private func pideBienMainScreen() {
-        let customPideBienViewController = CustomPideBienViewController.instantiate(from: .main)
-        customPideBienViewController.modalPresentationStyle = .fullScreen
-        customPideBienViewController.modalTransitionStyle = .crossDissolve
-        navigationController?.pushViewController(customPideBienViewController, animated: true)
+        let mainViewController = MainViewController.instantiate(from: .main)
+        mainViewController.modalPresentationStyle = .fullScreen
+        mainViewController.modalTransitionStyle = .crossDissolve
+        navigationController?.pushViewController(mainViewController, animated: true)
     }
 }
