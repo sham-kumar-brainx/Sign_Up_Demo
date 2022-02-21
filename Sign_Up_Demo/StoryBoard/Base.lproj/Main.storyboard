@@ -516,10 +516,10 @@
             </objects>
             <point key="canvasLocation" x="2612" y="82"/>
         </scene>
-        <!--Custom Pide Bien View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="RAr-mx-jpv">
             <objects>
-                <viewController storyboardIdentifier="CustomPideBienViewController" id="vAW-JT-GMK" customClass="CustomPideBienViewController" customModule="Sign_Up_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="vAW-JT-GMK" customClass="HomeViewController" customModule="Sign_Up_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NsB-Rt-XdJ" customClass="PidenBienMainScreenView" customModule="Sign_Up_Demo" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

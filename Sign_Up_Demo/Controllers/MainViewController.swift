@@ -215,7 +215,7 @@ extension MainViewController: SideMenuViewControllerDelegate {
     func openSelectedTab(_ tab: SideMenuTabs) {
         switch tab {
         case .home:
-            showViewController(viewController: CustomPideBienViewController.self)
+            showViewController(viewController: HomeViewController.self)
         case .myOrders:
             showViewController(viewController: MyOrdersViewController.self)
         case .payment:

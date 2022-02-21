@@ -1,6 +1,6 @@
 import UIKit
 
-class CustomPideBienViewController: BaseViewController {
+class HomeViewController: BaseViewController {
     
     // MARK: - Outlets
     @IBOutlet var pidebienMainScreenView: PidenBienMainScreenView!
@@ -82,7 +82,7 @@ class CustomPideBienViewController: BaseViewController {
 }
 
 // MARK: - Extention for confroming UICollectionViewDataSource
-extension CustomPideBienViewController: UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDataSource {
     
     // MARK: - Internal Methods
     func numberOfSections(in collectionView: UICollectionView) -> Int {

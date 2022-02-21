@@ -41,7 +41,7 @@
 		D992C070276A4FC2009FB111 /* Sign_Up_DemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D992C06F276A4FC2009FB111 /* Sign_Up_DemoUITestsLaunchTests.swift */; };
 		D9B1412F27BE5824004A04CE /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1412E27BE5824004A04CE /* SideMenuViewController.swift */; };
 		D9B1413127BE5865004A04CE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B1413027BE5865004A04CE /* MainViewController.swift */; };
-		D9B5112027BCBF400065F19D /* CustomPideBienViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B5111F27BCBF400065F19D /* CustomPideBienViewController.swift */; };
+		D9B5112027BCBF400065F19D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B5111F27BCBF400065F19D /* HomeViewController.swift */; };
 		D9B5112527BCC1EB0065F19D /* FooterCollectionReuseableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B5112127BCC1EA0065F19D /* FooterCollectionReuseableView.xib */; };
 		D9B5112627BCC1EB0065F19D /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B5112227BCC1EB0065F19D /* HeaderCollectionReusableView.swift */; };
 		D9B5112727BCC1EB0065F19D /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B5112327BCC1EB0065F19D /* HeaderCollectionReusableView.xib */; };
@@ -114,7 +114,7 @@
 		D992C06F276A4FC2009FB111 /* Sign_Up_DemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sign_Up_DemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D9B1412E27BE5824004A04CE /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		D9B1413027BE5865004A04CE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		D9B5111F27BCBF400065F19D /* CustomPideBienViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPideBienViewController.swift; sourceTree = "<group>"; };
+		D9B5111F27BCBF400065F19D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D9B5112127BCC1EA0065F19D /* FooterCollectionReuseableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FooterCollectionReuseableView.xib; sourceTree = "<group>"; };
 		D9B5112227BCC1EB0065F19D /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		D9B5112327BCC1EB0065F19D /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
@@ -316,7 +316,7 @@
 				D992C050276A4FC0009FB111 /* SignUpViewController.swift */,
 				D9C1923827707B770077C782 /* UserDetailViewController.swift */,
 				D9F2A50027BD360E00005658 /* BaseViewController.swift */,
-				D9B5111F27BCBF400065F19D /* CustomPideBienViewController.swift */,
+				D9B5111F27BCBF400065F19D /* HomeViewController.swift */,
 				D9B1412E27BE5824004A04CE /* SideMenuViewController.swift */,
 				D9B1413027BE5865004A04CE /* MainViewController.swift */,
 				D915745E27C3861400F120E9 /* MyOrdersViewController.swift */,
@@ -483,7 +483,7 @@
 			files = (
 				D92796CE27BA44FE00398A00 /* PideBienViewModel.swift in Sources */,
 				D9C1923727706AD00077C782 /* User.swift in Sources */,
-				D9B5112027BCBF400065F19D /* CustomPideBienViewController.swift in Sources */,
+				D9B5112027BCBF400065F19D /* HomeViewController.swift in Sources */,
 				D915746327C3A8E800F120E9 /* SideMenu.swift in Sources */,
 				D9C1923927707B770077C782 /* UserDetailViewController.swift in Sources */,
 				D992C051276A4FC0009FB111 /* SignUpViewController.swift in Sources */,

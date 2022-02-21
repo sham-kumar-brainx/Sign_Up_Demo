@@ -30,7 +30,7 @@
                         <constraint firstAttribute="height" constant="24" id="sgF-yi-la8"/>
                         <constraint firstAttribute="width" constant="24" id="zv8-yG-0Fl"/>
                     </constraints>
-                    <state key="normal" image="forward"/>
+                    <state key="normal" image="Forward"/>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="B9C-6L-LxQ"/>
@@ -45,6 +45,6 @@
         </view>
     </objects>
     <resources>
-        <image name="forward" width="24" height="24"/>
+        <image name="Forward" width="24" height="24"/>
     </resources>
 </document>
