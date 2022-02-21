@@ -9,7 +9,7 @@ class SideMenuActionView: UIView {
     // MARK: - private Properties
     private let nibName = "SideMenuActionView"
         
-    // MARK: - Init Methods
+    // MARK: - Initializer Methods
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
@@ -27,7 +27,7 @@ class SideMenuActionView: UIView {
         configureView()
     }
     
-    // MARK: - Life Cycle Methods
+    // MARK: - Lifecycle Methods
     func loadViewFromNib() -> UIView? {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: nibName, bundle: bundle)

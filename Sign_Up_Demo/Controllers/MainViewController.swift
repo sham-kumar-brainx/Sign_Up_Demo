@@ -12,14 +12,14 @@ class MainViewController: BaseViewController {
     private var sideMenuTrailingConstraint: NSLayoutConstraint!
     private var revealSideMenuOnTop: Bool = true
     private var gestureEnabled: Bool = true
+    private var sideMenuTabs = SideMenuTabs.allCases
     
-    // MARK: - Life Cycle Methods
+    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
-        showViewController(viewController: UINavigationController.self, storyboardId: "HomeNavID")
     }
-    
+   
     // MARK: - Private Methods
     private func configureView() {
         setSideMenuShadowView()
@@ -28,7 +28,7 @@ class MainViewController: BaseViewController {
         if revealSideMenuOnTop {
             view.insertSubview(sideMenuShadowView, at: 1)
         }
-        setsideMenuViewController()
+        setSideMenuViewController()
         if revealSideMenuOnTop {
             sideMenuTrailingConstraint = sideMenuViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -sideMenuRevealWidth)
             sideMenuTrailingConstraint.isActive = true
@@ -60,8 +60,10 @@ class MainViewController: BaseViewController {
         view.addGestureRecognizer(tapGestureRecognizer)
     }
     
-    private func setsideMenuViewController() {
+    private func setSideMenuViewController() {
         sideMenuViewController = SideMenuViewController.instantiate(from: .main)
+        sideMenuViewController.defaultSelectedTab = 0
+        sideMenuViewController.delegate = self
         view.insertSubview(sideMenuViewController!.view, at: revealSideMenuOnTop ? 2 : 0)
         addChild(sideMenuViewController!)
         sideMenuViewController!.didMove(toParent: self)
@@ -100,15 +102,14 @@ class MainViewController: BaseViewController {
             }
         }, completion: completion)
     }
-    
-    private func showViewController<T: UIViewController>(viewController: T.Type, storyboardId: String) -> () {
+
+    private func showViewController<T: UIViewController>(viewController: T.Type) -> () {
         for subview in view.subviews {
             if subview.tag == 99 {
                 subview.removeFromSuperview()
             }
         }
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: storyboardId) as! T
+        let viewController = T.instantiate(from: .main)
         viewController.view.tag = 99
         view.insertSubview(viewController.view, at: revealSideMenuOnTop ? 0 : 1)
         addChild(viewController)
@@ -122,9 +123,6 @@ class MainViewController: BaseViewController {
         }
         viewController.didMove(toParent: self)
     }
-}
-
-extension MainViewController {
     
     // MARK: - Action Methods
     @IBAction
@@ -207,5 +205,30 @@ extension MainViewController {
         default:
             break
         }
+    }
+}
+
+// MARK: - Extention for confroming SideMenuViewControllerDelegate
+extension MainViewController: SideMenuViewControllerDelegate {
+    
+    // MARK: - Internal Methods
+    func openSelectedTab(_ tab: SideMenuTabs) {
+        switch tab {
+        case .home:
+            showViewController(viewController: CustomPideBienViewController.self)
+        case .myOrders:
+            showViewController(viewController: MyOrdersViewController.self)
+        case .payment:
+            showViewController(viewController: PaymentViewController.self)
+        case .addresses:
+            print("Addresses Tab")
+        case .shops:
+            print("Shops Tab")
+        case .settings:
+            print("Settings Tab")
+        default:
+            return
+        }
+        DispatchQueue.main.async { self.sideMenuState(expanded: false) }
     }
 }

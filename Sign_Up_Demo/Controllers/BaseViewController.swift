@@ -2,7 +2,7 @@ import UIKit
 
 class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
     
-    // MARK: - Life Cycle Methods
+    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         disableDarkMode()

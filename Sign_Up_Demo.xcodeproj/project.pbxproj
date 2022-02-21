@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D915745D27C37B8D00F120E9 /* SideMenuTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915745C27C37B8D00F120E9 /* SideMenuTabs.swift */; };
+		D915745F27C3861400F120E9 /* MyOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915745E27C3861400F120E9 /* MyOrdersViewController.swift */; };
+		D915746127C386AB00F120E9 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915746027C386AB00F120E9 /* PaymentViewController.swift */; };
+		D915746327C3A8E800F120E9 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915746227C3A8E800F120E9 /* SideMenu.swift */; };
+		D915746527C3A95A00F120E9 /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915746427C3A95A00F120E9 /* SideMenuModel.swift */; };
+		D915746C27C3AE6B00F120E9 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915746B27C3AE6B00F120E9 /* UITableViewCell.swift */; };
 		D92244D827AC13E100518815 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92244D727AC13E100518815 /* UIView.swift */; };
 		D92796CE27BA44FE00398A00 /* PideBienViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92796CD27BA44FE00398A00 /* PideBienViewModel.swift */; };
 		D92796D227BA608B00398A00 /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92796D127BA608B00398A00 /* UICollectionViewCell.swift */; };
@@ -70,6 +76,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D915745C27C37B8D00F120E9 /* SideMenuTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTabs.swift; sourceTree = "<group>"; };
+		D915745E27C3861400F120E9 /* MyOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersViewController.swift; sourceTree = "<group>"; };
+		D915746027C386AB00F120E9 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		D915746227C3A8E800F120E9 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		D915746427C3A95A00F120E9 /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
+		D915746B27C3AE6B00F120E9 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		D92244D727AC13E100518815 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		D92796CD27BA44FE00398A00 /* PideBienViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PideBienViewModel.swift; sourceTree = "<group>"; };
 		D92796D127BA608B00398A00 /* UICollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
@@ -148,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				D92796CD27BA44FE00398A00 /* PideBienViewModel.swift */,
+				D915746427C3A95A00F120E9 /* SideMenuModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -168,6 +181,7 @@
 				D95933B127A92CA200A2D9EA /* LocalizedKey.swift */,
 				D95933AF27A923A200A2D9EA /* TextFieldValidationStatus.swift */,
 				D9B5113227BCD8390065F19D /* Section.swift */,
+				D915745C27C37B8D00F120E9 /* SideMenuTabs.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -193,6 +207,7 @@
 				D992AB1D2774AE0000903EDC /* UIStoryboard.swift */,
 				D92244D727AC13E100518815 /* UIView.swift */,
 				D9B5113027BCD3F70065F19D /* UICollectionReusableView.swift */,
+				D915746B27C3AE6B00F120E9 /* UITableViewCell.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -290,6 +305,7 @@
 			children = (
 				D97F2AF027BA3BB000F31F88 /* ScrollItems.swift */,
 				D9C1923627706AD00077C782 /* User.swift */,
+				D915746227C3A8E800F120E9 /* SideMenu.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -303,6 +319,8 @@
 				D9B5111F27BCBF400065F19D /* CustomPideBienViewController.swift */,
 				D9B1412E27BE5824004A04CE /* SideMenuViewController.swift */,
 				D9B1413027BE5865004A04CE /* MainViewController.swift */,
+				D915745E27C3861400F120E9 /* MyOrdersViewController.swift */,
+				D915746027C386AB00F120E9 /* PaymentViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -466,14 +484,18 @@
 				D92796CE27BA44FE00398A00 /* PideBienViewModel.swift in Sources */,
 				D9C1923727706AD00077C782 /* User.swift in Sources */,
 				D9B5112027BCBF400065F19D /* CustomPideBienViewController.swift in Sources */,
+				D915746327C3A8E800F120E9 /* SideMenu.swift in Sources */,
 				D9C1923927707B770077C782 /* UserDetailViewController.swift in Sources */,
 				D992C051276A4FC0009FB111 /* SignUpViewController.swift in Sources */,
 				D9F2A50127BD360E00005658 /* BaseViewController.swift in Sources */,
 				D9B1412F27BE5824004A04CE /* SideMenuViewController.swift in Sources */,
+				D915746127C386AB00F120E9 /* PaymentViewController.swift in Sources */,
 				D95933B227A92CA200A2D9EA /* LocalizedKey.swift in Sources */,
 				D9B5112B27BCC20B0065F19D /* VerticalCollectionCell.swift in Sources */,
 				D9B1413127BE5865004A04CE /* MainViewController.swift in Sources */,
+				D915746C27C3AE6B00F120E9 /* UITableViewCell.swift in Sources */,
 				D9B5113527BCDD200065F19D /* HorizontalCollectionCell.swift in Sources */,
+				D915745F27C3861400F120E9 /* MyOrdersViewController.swift in Sources */,
 				D98F205A2771EAAA001C41D8 /* SignUpView.swift in Sources */,
 				D97F2AF127BA3BB000F31F88 /* ScrollItems.swift in Sources */,
 				D932ABB627BE6CD4008A1020 /* SideMenuActionView.swift in Sources */,
@@ -485,10 +507,12 @@
 				D95933B027A923A200A2D9EA /* TextFieldValidationStatus.swift in Sources */,
 				D98F205D2771FABF001C41D8 /* ColorExtentions.swift in Sources */,
 				D98F205F2771FB65001C41D8 /* CALayerExtentions.swift in Sources */,
+				D915746527C3A95A00F120E9 /* SideMenuModel.swift in Sources */,
 				D9B5113127BCD3F70065F19D /* UICollectionReusableView.swift in Sources */,
 				D932ABB727BE6CD4008A1020 /* SideMenuView.swift in Sources */,
 				D9B5112627BCC1EB0065F19D /* HeaderCollectionReusableView.swift in Sources */,
 				D992C04F276A4FC0009FB111 /* SceneDelegate.swift in Sources */,
+				D915745D27C37B8D00F120E9 /* SideMenuTabs.swift in Sources */,
 				D991E7D1277341E6008752B7 /* AppConstants.swift in Sources */,
 				D992AB1E2774AE0000903EDC /* UIStoryboard.swift in Sources */,
 				D92244D827AC13E100518815 /* UIView.swift in Sources */,
