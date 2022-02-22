@@ -1,13 +1,14 @@
+import Foundation
 import UIKit
 
-class SideMenuActionView: UIView {
+class PaymentMethodView: UIView {
     
     // MARK: - Outlets
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet var sideMenuView: UIView!
+    @IBOutlet weak var checkBox: UIButton!
+    @IBOutlet weak var heading: UILabel!
     
     // MARK: - private Properties
-    private let nibName = "SideMenuActionView"
+    private let nibName = "PaymentMethodView"
         
     // MARK: - Initializer Methods
     required init?(coder aDecoder: NSCoder) {
@@ -24,9 +25,8 @@ class SideMenuActionView: UIView {
         guard let view = loadViewFromNib() else { return }
         view.frame = self.bounds
         self.addSubview(view)
-        configureView()
     }
-    
+
     // MARK: - Lifecycle Methods
     func loadViewFromNib() -> UIView? {
         let bundle = Bundle(for: type(of: self))
@@ -34,13 +34,17 @@ class SideMenuActionView: UIView {
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
     
-    // MARK: - Public Methods
-    func setTitle(_ title: String) {
-        titleLabel.text = title
+    // MARK: - Internal Methods
+    func setCheckboxImage(_ imageName: String) {
+        checkBox.setImage(UIImage(named: imageName), for: .normal)
     }
     
-    // MARK: - Private Methods
-    private func configureView() {
-        sideMenuView.addBottomBorderWithColor(color: UIColor.hexStringToUIColor(hex: AppConstants.lineColorHex), borderWidth: 1, width: CGFloat(AppConstants.sideMenuWidth))
+    func setHeading(_ heading: String) {
+        self.heading.text = heading
+    }
+    
+    func setData(heading: String, imageName: String) {
+        setHeading(heading)
+        setCheckboxImage(imageName)
     }
 }

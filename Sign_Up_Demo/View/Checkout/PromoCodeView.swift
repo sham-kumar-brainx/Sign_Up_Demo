@@ -1,13 +1,13 @@
+import Foundation
 import UIKit
 
-class SideMenuActionView: UIView {
+class PromoCodeView: UIView {
     
     // MARK: - Outlets
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet var sideMenuView: UIView!
+    @IBOutlet weak var heading: UILabel!
     
     // MARK: - private Properties
-    private let nibName = "SideMenuActionView"
+    private let nibName = "PromoCodeView"
         
     // MARK: - Initializer Methods
     required init?(coder aDecoder: NSCoder) {
@@ -24,7 +24,6 @@ class SideMenuActionView: UIView {
         guard let view = loadViewFromNib() else { return }
         view.frame = self.bounds
         self.addSubview(view)
-        configureView()
     }
     
     // MARK: - Lifecycle Methods
@@ -34,13 +33,8 @@ class SideMenuActionView: UIView {
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
     
-    // MARK: - Public Methods
-    func setTitle(_ title: String) {
-        titleLabel.text = title
-    }
-    
-    // MARK: - Private Methods
-    private func configureView() {
-        sideMenuView.addBottomBorderWithColor(color: UIColor.hexStringToUIColor(hex: AppConstants.lineColorHex), borderWidth: 1, width: CGFloat(AppConstants.sideMenuWidth))
+    // MARK: - Internal Methods
+    func setHeading(_ heading: String) {
+        self.heading.text = heading
     }
 }

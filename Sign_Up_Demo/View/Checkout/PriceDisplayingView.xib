@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PriceDisplayingView" customModule="Sign_Up_Demo" customModuleProvider="target">
+            <connections>
+                <outlet property="heading" destination="v08-tV-5dc" id="SK0-RK-WXv"/>
+                <outlet property="price" destination="h6v-eB-u4a" id="H3T-AD-2bb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="pqK-i6-AAJ">
+            <rect key="frame" x="0.0" y="0.0" width="536" height="88"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heading" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v08-tV-5dc" userLabel="heading">
+                    <rect key="frame" x="0.0" y="44" width="486" height="44"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6v-eB-u4a">
+                    <rect key="frame" x="494" y="44" width="42" height="44"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="hZM-Mh-KqK"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="v08-tV-5dc" secondAttribute="bottom" id="4o8-Nu-jlB"/>
+                <constraint firstItem="h6v-eB-u4a" firstAttribute="leading" secondItem="v08-tV-5dc" secondAttribute="trailing" constant="8" id="HOn-lw-5W0"/>
+                <constraint firstAttribute="bottom" secondItem="h6v-eB-u4a" secondAttribute="bottom" id="OuQ-I8-iWt"/>
+                <constraint firstItem="v08-tV-5dc" firstAttribute="top" secondItem="hZM-Mh-KqK" secondAttribute="top" id="QQ5-zE-cdV"/>
+                <constraint firstItem="h6v-eB-u4a" firstAttribute="top" secondItem="hZM-Mh-KqK" secondAttribute="top" id="Tyh-Ur-CH6"/>
+                <constraint firstItem="v08-tV-5dc" firstAttribute="leading" secondItem="hZM-Mh-KqK" secondAttribute="leading" id="dcc-d5-whe"/>
+                <constraint firstItem="hZM-Mh-KqK" firstAttribute="trailing" secondItem="h6v-eB-u4a" secondAttribute="trailing" id="fZO-FW-oXZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="333.33333333333337" y="411.83035714285711"/>
+        </view>
+    </objects>
+</document>

@@ -15,9 +15,17 @@
 		D915746C27C3AE6B00F120E9 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915746B27C3AE6B00F120E9 /* UITableViewCell.swift */; };
 		D920C7DC27C4D3F80046B717 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D920C7DB27C4D3F80046B717 /* CheckoutViewController.swift */; };
 		D920C7DE27C4D67A0046B717 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D920C7DD27C4D67A0046B717 /* CheckoutView.swift */; };
+		D920C7E127C4FD090046B717 /* PaymentDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D920C7E027C4FD090046B717 /* PaymentDetailView.xib */; };
+		D920C7E327C500220046B717 /* PaymentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D920C7E227C500220046B717 /* PaymentDetailView.swift */; };
+		D920C7E527C52AB90046B717 /* PaymentMethodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D920C7E427C52AB90046B717 /* PaymentMethodView.xib */; };
+		D920C7E727C52ACF0046B717 /* PaymentMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D920C7E627C52ACF0046B717 /* PaymentMethodView.swift */; };
 		D92244D827AC13E100518815 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92244D727AC13E100518815 /* UIView.swift */; };
 		D92796CE27BA44FE00398A00 /* PideBienViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92796CD27BA44FE00398A00 /* PideBienViewModel.swift */; };
 		D92796D227BA608B00398A00 /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92796D127BA608B00398A00 /* UICollectionViewCell.swift */; };
+		D92FF59127C603AC0025274E /* PriceDisplayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92FF59027C603AC0025274E /* PriceDisplayingView.swift */; };
+		D92FF59327C604050025274E /* PriceDisplayingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92FF59227C604050025274E /* PriceDisplayingView.xib */; };
+		D92FF59527C60B070025274E /* PromoCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92FF59427C60B070025274E /* PromoCodeView.xib */; };
+		D92FF59727C60B130025274E /* PromoCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92FF59627C60B130025274E /* PromoCodeView.swift */; };
 		D932ABB627BE6CD4008A1020 /* SideMenuActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932ABB327BE6CD4008A1020 /* SideMenuActionView.swift */; };
 		D932ABB727BE6CD4008A1020 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D932ABB427BE6CD4008A1020 /* SideMenuView.swift */; };
 		D932ABB927BE8924008A1020 /* SideMenuActionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D932ABB227BE6CD4008A1020 /* SideMenuActionView.xib */; };
@@ -86,9 +94,17 @@
 		D915746B27C3AE6B00F120E9 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		D920C7DB27C4D3F80046B717 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		D920C7DD27C4D67A0046B717 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		D920C7E027C4FD090046B717 /* PaymentDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentDetailView.xib; sourceTree = "<group>"; };
+		D920C7E227C500220046B717 /* PaymentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailView.swift; sourceTree = "<group>"; };
+		D920C7E427C52AB90046B717 /* PaymentMethodView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentMethodView.xib; sourceTree = "<group>"; };
+		D920C7E627C52ACF0046B717 /* PaymentMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodView.swift; sourceTree = "<group>"; };
 		D92244D727AC13E100518815 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		D92796CD27BA44FE00398A00 /* PideBienViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PideBienViewModel.swift; sourceTree = "<group>"; };
 		D92796D127BA608B00398A00 /* UICollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
+		D92FF59027C603AC0025274E /* PriceDisplayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceDisplayingView.swift; sourceTree = "<group>"; };
+		D92FF59227C604050025274E /* PriceDisplayingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceDisplayingView.xib; sourceTree = "<group>"; };
+		D92FF59427C60B070025274E /* PromoCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromoCodeView.xib; sourceTree = "<group>"; };
+		D92FF59627C60B130025274E /* PromoCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCodeView.swift; sourceTree = "<group>"; };
 		D932ABB227BE6CD4008A1020 /* SideMenuActionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuActionView.xib; sourceTree = "<group>"; };
 		D932ABB327BE6CD4008A1020 /* SideMenuActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuActionView.swift; sourceTree = "<group>"; };
 		D932ABB427BE6CD4008A1020 /* SideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
@@ -164,6 +180,14 @@
 			isa = PBXGroup;
 			children = (
 				D920C7DD27C4D67A0046B717 /* CheckoutView.swift */,
+				D920C7E027C4FD090046B717 /* PaymentDetailView.xib */,
+				D920C7E227C500220046B717 /* PaymentDetailView.swift */,
+				D920C7E427C52AB90046B717 /* PaymentMethodView.xib */,
+				D920C7E627C52ACF0046B717 /* PaymentMethodView.swift */,
+				D92FF59027C603AC0025274E /* PriceDisplayingView.swift */,
+				D92FF59227C604050025274E /* PriceDisplayingView.xib */,
+				D92FF59427C60B070025274E /* PromoCodeView.xib */,
+				D92FF59627C60B130025274E /* PromoCodeView.swift */,
 			);
 			path = Checkout;
 			sourceTree = "<group>";
@@ -464,11 +488,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D932ABB927BE8924008A1020 /* SideMenuActionView.xib in Resources */,
+				D920C7E127C4FD090046B717 /* PaymentDetailView.xib in Resources */,
 				D9B5112727BCC1EB0065F19D /* HeaderCollectionReusableView.xib in Resources */,
+				D92FF59327C604050025274E /* PriceDisplayingView.xib in Resources */,
 				D992C059276A4FC2009FB111 /* LaunchScreen.storyboard in Resources */,
+				D920C7E527C52AB90046B717 /* PaymentMethodView.xib in Resources */,
 				D9B5113727BCDDC20065F19D /* HorizontalCollectionCell.xib in Resources */,
 				D992C056276A4FC2009FB111 /* Assets.xcassets in Resources */,
 				D9B5112527BCC1EB0065F19D /* FooterCollectionReuseableView.xib in Resources */,
+				D92FF59527C60B070025274E /* PromoCodeView.xib in Resources */,
 				D9B5112C27BCC20B0065F19D /* VerticalCollectionCell.xib in Resources */,
 				D992C054276A4FC0009FB111 /* Main.storyboard in Resources */,
 			);
@@ -508,12 +536,14 @@
 				D95933B227A92CA200A2D9EA /* LocalizedKey.swift in Sources */,
 				D9B5112B27BCC20B0065F19D /* VerticalCollectionCell.swift in Sources */,
 				D9B1413127BE5865004A04CE /* MainViewController.swift in Sources */,
+				D92FF59727C60B130025274E /* PromoCodeView.swift in Sources */,
 				D915746C27C3AE6B00F120E9 /* UITableViewCell.swift in Sources */,
 				D9B5113527BCDD200065F19D /* HorizontalCollectionCell.swift in Sources */,
 				D915745F27C3861400F120E9 /* MyOrdersViewController.swift in Sources */,
 				D98F205A2771EAAA001C41D8 /* SignUpView.swift in Sources */,
 				D97F2AF127BA3BB000F31F88 /* ScrollItems.swift in Sources */,
 				D932ABB627BE6CD4008A1020 /* SideMenuActionView.swift in Sources */,
+				D92FF59127C603AC0025274E /* PriceDisplayingView.swift in Sources */,
 				D92796D227BA608B00398A00 /* UICollectionViewCell.swift in Sources */,
 				D991E7D3277346F1008752B7 /* UIAlertControllerExtention.swift in Sources */,
 				D9B5112E27BCC6D90065F19D /* UIViewController.swift in Sources */,
@@ -530,10 +560,12 @@
 				D992C04F276A4FC0009FB111 /* SceneDelegate.swift in Sources */,
 				D915745D27C37B8D00F120E9 /* SideMenuTabs.swift in Sources */,
 				D991E7D1277341E6008752B7 /* AppConstants.swift in Sources */,
+				D920C7E327C500220046B717 /* PaymentDetailView.swift in Sources */,
 				D992AB1E2774AE0000903EDC /* UIStoryboard.swift in Sources */,
 				D92244D827AC13E100518815 /* UIView.swift in Sources */,
 				D9B5112827BCC1EB0065F19D /* FooterCollectionReuseableView.swift in Sources */,
 				D9B5113327BCD8390065F19D /* Section.swift in Sources */,
+				D920C7E727C52ACF0046B717 /* PaymentMethodView.swift in Sources */,
 				D95933B427A92D4D00A2D9EA /* PidenBienMainScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
