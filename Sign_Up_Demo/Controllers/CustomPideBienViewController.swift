@@ -28,11 +28,18 @@ class CustomPideBienViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCollectionView()
+        pidebienMainScreenView.cartButtonView.addTapAction(#selector(cartButtonViewTapped(_:)),target: self)
     }
     
     // MARK: - Action Methods
-    @IBAction func sideMenuImageTaped(_ sender: UIButton) {
+    @IBAction
+    func sideMenuImageTaped(_ sender: UIButton) {
         revealViewController()?.revealSideMenu()
+    }
+    
+    @objc
+    func cartButtonViewTapped(_ sender: UIGestureRecognizer) {
+        openCheckoutViewController()
     }
     
     // MARK: - Private Methods
@@ -44,6 +51,11 @@ class CustomPideBienViewController: BaseViewController {
         collectionView.collectionViewLayout = compositionalLayout
         collectionView.dataSource = self
         collectionView.contentInsetAdjustmentBehavior = .scrollableAxes
+    }
+    
+    private func openCheckoutViewController() {
+        let checkoutViewController = CheckoutViewController.instantiate(from: .main)
+        navigationController?.pushViewController(checkoutViewController, animated: true)
     }
     
     // MARK: - Internal Methods

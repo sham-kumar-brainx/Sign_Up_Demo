@@ -13,6 +13,8 @@
 		D915746327C3A8E800F120E9 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915746227C3A8E800F120E9 /* SideMenu.swift */; };
 		D915746527C3A95A00F120E9 /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915746427C3A95A00F120E9 /* SideMenuModel.swift */; };
 		D915746C27C3AE6B00F120E9 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915746B27C3AE6B00F120E9 /* UITableViewCell.swift */; };
+		D920C7DC27C4D3F80046B717 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D920C7DB27C4D3F80046B717 /* CheckoutViewController.swift */; };
+		D920C7DE27C4D67A0046B717 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D920C7DD27C4D67A0046B717 /* CheckoutView.swift */; };
 		D92244D827AC13E100518815 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92244D727AC13E100518815 /* UIView.swift */; };
 		D92796CE27BA44FE00398A00 /* PideBienViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92796CD27BA44FE00398A00 /* PideBienViewModel.swift */; };
 		D92796D227BA608B00398A00 /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92796D127BA608B00398A00 /* UICollectionViewCell.swift */; };
@@ -82,6 +84,8 @@
 		D915746227C3A8E800F120E9 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		D915746427C3A95A00F120E9 /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
 		D915746B27C3AE6B00F120E9 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		D920C7DB27C4D3F80046B717 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		D920C7DD27C4D67A0046B717 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		D92244D727AC13E100518815 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		D92796CD27BA44FE00398A00 /* PideBienViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PideBienViewModel.swift; sourceTree = "<group>"; };
 		D92796D127BA608B00398A00 /* UICollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
@@ -156,6 +160,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D920C7DF27C4DFBE0046B717 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+				D920C7DD27C4D67A0046B717 /* CheckoutView.swift */,
+			);
+			path = Checkout;
+			sourceTree = "<group>";
+		};
 		D92796CC27BA44E900398A00 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +304,7 @@
 		D9C1923127706A230077C782 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D920C7DF27C4DFBE0046B717 /* Checkout */,
 				D932ABB827BE6CE0008A1020 /* Side Menu */,
 				D9B5112F27BCC8BE0065F19D /* CollectionView */,
 				D98F20592771EAAA001C41D8 /* SignUpView.swift */,
@@ -321,6 +334,7 @@
 				D9B1413027BE5865004A04CE /* MainViewController.swift */,
 				D915745E27C3861400F120E9 /* MyOrdersViewController.swift */,
 				D915746027C386AB00F120E9 /* PaymentViewController.swift */,
+				D920C7DB27C4D3F80046B717 /* CheckoutViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -482,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D92796CE27BA44FE00398A00 /* PideBienViewModel.swift in Sources */,
+				D920C7DC27C4D3F80046B717 /* CheckoutViewController.swift in Sources */,
 				D9C1923727706AD00077C782 /* User.swift in Sources */,
 				D9B5112027BCBF400065F19D /* CustomPideBienViewController.swift in Sources */,
 				D915746327C3A8E800F120E9 /* SideMenu.swift in Sources */,
@@ -502,6 +517,7 @@
 				D92796D227BA608B00398A00 /* UICollectionViewCell.swift in Sources */,
 				D991E7D3277346F1008752B7 /* UIAlertControllerExtention.swift in Sources */,
 				D9B5112E27BCC6D90065F19D /* UIViewController.swift in Sources */,
+				D920C7DE27C4D67A0046B717 /* CheckoutView.swift in Sources */,
 				D98F20612771FB98001C41D8 /* StringExtentions.swift in Sources */,
 				D992C04D276A4FC0009FB111 /* AppDelegate.swift in Sources */,
 				D95933B027A923A200A2D9EA /* TextFieldValidationStatus.swift in Sources */,

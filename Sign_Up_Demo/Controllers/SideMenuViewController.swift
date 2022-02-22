@@ -26,7 +26,8 @@ class SideMenuViewController: BaseViewController {
     }
     
     // MARK: - Action Methods
-    @IBAction func crossTaped(_ sender: UIButton) {
+    @IBAction
+    func crossTaped(_ sender: UIButton) {
         revealViewController()?.revealSideMenu()
     }
     
