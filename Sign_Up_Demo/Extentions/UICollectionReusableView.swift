@@ -4,12 +4,12 @@ import UIKit
 extension UICollectionReusableView {
     
     // MARK: - Static Properties
-    static var reuseIdentifierForHeaterAndFooter: String {
+    static var reuseIdentifierForHeaderAndFooter: String {
         return String(describing: self)
     }
     
     // MARK: - Static Methods
-    static func nibForHeaterAndFooter() -> UINib {
-        return UINib(nibName: self.reuseIdentifierForHeaterAndFooter, bundle: nil)
+    static func nibForHeaderAndFooter() -> UINib {
+        return UINib(nibName: self.reuseIdentifierForHeaderAndFooter, bundle: nil)
     }
 }
