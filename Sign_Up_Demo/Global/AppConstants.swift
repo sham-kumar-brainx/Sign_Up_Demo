@@ -20,4 +20,5 @@ struct AppConstants {
     static let phoneInvalidMessage = "Invalid Phone Number!\nIt must be of 9 to 11 digits"
     static let alertTitle = "Alert"
     static let alertActionOk = "OK"
+    static let georgia = "Georgia"
 }

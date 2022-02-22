@@ -1,6 +1,6 @@
 import UIKit
 
-class SignUpViewController: BaseViewController {
+class SignUpViewController: BaseViewController, UIGestureRecognizerDelegate {
     
     // MARK: - Outlets
     @IBOutlet weak var signUpView: SignUpView!
@@ -19,7 +19,7 @@ extension SignUpViewController {
         let validationState = validateData()
         switch validationState {
         case .valid:
-            proceedToUserDetailViewController()
+            pideBienMainScreen()
         case let .invalid(message):
             showAlertWith(message: message)
         }
@@ -64,16 +64,8 @@ extension SignUpViewController {
         return .valid
     }
     
-    private func proceedToUserDetailViewController() {
-        let userDetailViewController = UIViewController.instantiate(UserDetailViewController.self, fromStoryboard: .main)
-        userDetailViewController.details = user?.description
-        navigationController?.pushViewController(userDetailViewController, animated: true)
-    }
-    
     private func pideBienMainScreen() {
-        let customPideBienViewController = CustomPideBienViewController.instantiate(from: .main)
-        customPideBienViewController.modalPresentationStyle = .fullScreen
-        customPideBienViewController.modalTransitionStyle = .crossDissolve
+        let customPideBienViewController = HomeViewController.instantiate(from: .main)
         navigationController?.pushViewController(customPideBienViewController, animated: true)
     }
 }
