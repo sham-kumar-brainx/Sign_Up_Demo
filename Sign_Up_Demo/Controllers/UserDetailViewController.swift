@@ -1,21 +1,16 @@
-//
-//  UserDetailViewController.swift
-//  Sign_Up_Demo
-//
-//  Created by BrainX IOS on 20/12/2021.
-//
-
 import UIKit
 
 class UserDetailViewController: UIViewController {
     
+    // MARK: Outlets
     @IBOutlet weak var textView: UITextView!
-
+    
+    // MARK: Properties
     var details: String?
     
-        override func viewWillAppear(_ animated: Bool) {
+    // MARK: Lifecycle Methods
+    override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
-      
       textView.text = details
     }
 }
