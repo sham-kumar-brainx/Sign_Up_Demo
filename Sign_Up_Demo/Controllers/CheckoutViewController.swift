@@ -6,7 +6,7 @@ class CheckoutViewController: BaseViewController {
     @IBOutlet weak var checkoutView: CheckoutView!
     
     // MARK: - Private Properties
-    private var tipsButton = TipsButton.allCases
+    private var checkBoxes = CheckBoxes.allCases
     private var isControllSwitchSelected = false
     
     // MARK: - Lifecycle Methods
@@ -20,38 +20,42 @@ class CheckoutViewController: BaseViewController {
     func crossButtonTaped(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-    @IBAction func controlSwithTaped(_ sender: UIButton) {
+    
+    @IBAction
+    func controlSwithTaped(_ sender: UIButton) {
         isControllSwitchSelected = !isControllSwitchSelected
         checkoutView.toggleControlSwitch(shouldSelect: isControllSwitchSelected)
+    }
+    
+    @IBAction
+    func tipsSegmentControlChanged(_ sender: Any) {
+        
     }
     
     @objc
     func sideMenuActionTapped(_ sender: UIGestureRecognizer) {
         guard let index = sender.view?.tag else { return }
-        setTappedButton(tipsButton[index])
+        setTappedButton(checkBoxes[index])
     }
     
     // MARK: - Private Methods
     private func configureOnLoad(){
-        checkoutView.zeroDollar.addTapAction(#selector(sideMenuActionTapped(_:)),target: self)
-        checkoutView.fiveDollar.addTapAction(#selector(sideMenuActionTapped(_:)),target: self)
-        checkoutView.tenDollar.addTapAction(#selector(sideMenuActionTapped(_:)),target: self)
-        checkoutView.otherDollar.addTapAction(#selector(sideMenuActionTapped(_:)),target: self)
+        checkoutView.asapCheckboxView.addTapAction(#selector(sideMenuActionTapped(_:)),target: self)
+        checkoutView.scheduleCheckboxView.addTapAction(#selector(sideMenuActionTapped(_:)),target: self)
+        checkoutView.pickUpCheckboxView.addTapAction(#selector(sideMenuActionTapped(_:)),target: self)
     }
     
     // MARK: - Internal Methods
-    func setTappedButton(_ tab: TipsButton) {
-        switch tab {
-        case .zeroDollar:
-            checkoutView.zeroDollar.setSelected()
-        case .fiveDollar:
-            checkoutView.fiveDollar.setSelected()
-        case .tenDollar:
-            checkoutView.tenDollar.setSelected()
-        case .otherDollar:
-            checkoutView.otherDollar.setSelected()
-        default:
-            return
-        }
+    func setTappedButton(_ tab: CheckBoxes) {
+//        switch tab {
+//        case .asap:
+//            <#code#>
+//        case .schedule:
+//            <#code#>
+//        case .pickUP:
+//            <#code#>
+//        case .none:
+//            <#code#>
+//        }
     }
 }

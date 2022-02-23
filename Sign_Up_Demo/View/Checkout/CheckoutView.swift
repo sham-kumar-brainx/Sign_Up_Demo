@@ -17,15 +17,11 @@ class CheckoutView: UIView {
     @IBOutlet weak var discountsView: PriceDisplayingView!
     @IBOutlet weak var totalPriceView: PriceDisplayingView!
     @IBOutlet weak var promoCodeView: PromoCodeView!
-    @IBOutlet weak var zeroDollar: TipsUIButton!
-    @IBOutlet weak var fiveDollar: TipsUIButton!
-    @IBOutlet weak var tenDollar: TipsUIButton!
-    @IBOutlet weak var otherDollar: TipsUIButton!
-    @IBOutlet weak var tipsButtonStackView: UIStackView!
     @IBOutlet weak var heightForInvoiceTaxView: NSLayoutConstraint!
     @IBOutlet weak var invoiceTaxView: UIView!
     @IBOutlet weak var heightForScrollContentView: NSLayoutConstraint!
     @IBOutlet weak var controlSwitchButton: UIButton!
+    @IBOutlet weak var tipsSegmentedControl: UISegmentedControl!
     
     // MARK: - Lifecycle Methods
     override func awakeFromNib() {
@@ -54,11 +50,7 @@ class CheckoutView: UIView {
         discountsView.setData(heading: LocalizedKey.discounts.string, price: -5.00)
         totalPriceView.setData(heading: LocalizedKey.total.string, price: 12.00)
         promoCodeView.setHeading(LocalizedKey.promoCodeMessage.string)
-        zeroDollar.setData(title: LocalizedKey.zeroDollar.string, isSelected: false)
-        fiveDollar.setData(title: LocalizedKey.fiveDollar.string, isSelected: true)
-        tenDollar.setData(title: LocalizedKey.tenDollar.string, isSelected: false)
-        otherDollar.setData(title: LocalizedKey.otherDollar.string, isSelected: false)
-        tipsButtonStackView.layer.cornerRadius = 4
+        tipsSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
     }
     
     func toggleControlSwitch(shouldSelect: Bool) {
