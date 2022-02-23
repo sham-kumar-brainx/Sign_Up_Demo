@@ -19,7 +19,7 @@ class MainViewController: BaseViewController {
         super.viewDidLoad()
         configureView()
     }
-   
+    
     // MARK: - Private Methods
     private func configureView() {
         setSideMenuShadowView()
@@ -102,7 +102,7 @@ class MainViewController: BaseViewController {
             }
         }, completion: completion)
     }
-
+    
     private func showViewController<T: UIViewController>(viewController: T.Type) -> () {
         for subview in view.subviews {
             if subview.tag == 99 {

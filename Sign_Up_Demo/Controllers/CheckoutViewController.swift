@@ -6,7 +6,6 @@ class CheckoutViewController: BaseViewController {
     @IBOutlet weak var checkoutView: CheckoutView!
     
     // MARK: - Private Properties
-    private var checkBoxes = CheckBoxes.allCases
     private var isControllSwitchSelected = false
     
     // MARK: - Lifecycle Methods
@@ -28,9 +27,7 @@ class CheckoutViewController: BaseViewController {
     }
     
     @IBAction
-    func tipsSegmentControlChanged(_ sender: Any) {
-        
-    }
+    func tipsSegmentControlChanged(_ sender: Any) { }
     
     @objc
     func asapCheckBoxTapped(_ sender: UIGestureRecognizer) {

@@ -6,7 +6,7 @@ class VerticalCollectionCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageTitle: UILabel!
     
-    // MARK: - LifeCycle Methods
+    // MARK: - Lifecycle Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         configure()
@@ -19,16 +19,16 @@ class VerticalCollectionCell: UICollectionViewCell {
     }
 
     // MARK: - Internal Methods
-    func setImage(_ image: UIImage) {
-        imageView.image = image
+    func setImage(with imageName: String) {
+        imageView.image = UIImage(named: imageName)
     }
     
-    func setImage(with title: String) {
+    func setItemTitle(with title: String) {
         imageTitle.text = title
     }
     
     func setCellData(with model: VerticalScrollItemList) {
-        imageView.image = UIImage(named: model.itemImage)
-        imageTitle.text = model.title
+        setImage(with: model.itemImage)
+        setItemTitle(with: model.title)
     }
 }

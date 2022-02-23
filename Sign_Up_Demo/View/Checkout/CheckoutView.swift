@@ -26,18 +26,23 @@ class CheckoutView: UIView {
     // MARK: - Lifecycle Methods
     override func awakeFromNib() {
         super.awakeFromNib()
-        configure()
+        configureView()
+        setUpData()
     }
     
     // MARK: - Private Methods
-    private func configure() {
+    private func configureView() {
         topView.layer.applySketchShadow(color: UIColor.hexStringToUIColor(hex: AppConstants.topViewShadowColorHex), alpha: 0.2, x: 0, y: 3, blur: 4)
         paymentButtonView.layer.cornerRadius = 24
         discountsView.heading.textColor = UIColor.hexStringToUIColor(hex: AppConstants.darkBlueColorHex)
         discountsView.price.textColor = UIColor.hexStringToUIColor(hex: AppConstants.darkBlueColorHex)
         totalPriceView.heading.font = totalPriceView.heading.font.withSize(16)
         totalPriceView.heading.textColor = .black
+        tipsSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
         totalPriceView.price.font = totalPriceView.heading.font.withSize(16)
+    }
+    
+    private func setUpData() {
         addressView.setData(heading: LocalizedKey.addressHeading.string, headingDescription: LocalizedKey.addressHeadingDescription.string)
         contactView.setData(heading: LocalizedKey.contactInformation.string, headingDescription: LocalizedKey.contanctInformationDescription.string)
         paymentMethodView.setData(heading: LocalizedKey.paymentMethodHeading.string, headingDescription: LocalizedKey.paymentMethodHeadingDescription.string)
@@ -50,9 +55,9 @@ class CheckoutView: UIView {
         discountsView.setData(heading: LocalizedKey.discounts.string, price: -5.00)
         totalPriceView.setData(heading: LocalizedKey.total.string, price: 12.00)
         promoCodeView.setHeading(LocalizedKey.promoCodeMessage.string)
-        tipsSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
     }
     
+    // MARK: - Internal Methods
     func toggleControlSwitch(shouldSelect: Bool) {
         shouldSelect ? controlSwitchButton.setImage(UIImage(named: LocalizedKey.selectedControlSwitch.string), for: .normal) : controlSwitchButton.setImage(UIImage(named: LocalizedKey.unselectedControlSwitch.string), for: .normal)
     }

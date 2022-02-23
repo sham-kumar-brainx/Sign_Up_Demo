@@ -9,7 +9,7 @@ class HorizontalCollectionCell: UICollectionViewCell {
     @IBOutlet weak var subTitle: UILabel!
     @IBOutlet weak var itemImage: UIImageView!
     
-    // MARK: - LifeCycle Methods
+    // MARK: - Lifecycle Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         configureView()
@@ -21,26 +21,26 @@ class HorizontalCollectionCell: UICollectionViewCell {
     }
     
     // MARK: - Internal Methods
-    func setInnerViewColor(colorHex: String) {
+    func setInnerViewColor(with colorHex: String) {
         innerView.backgroundColor = UIColor.hexStringToUIColor(hex: colorHex)
     }
     
-    func setItemWith(title: String) {
+    func setItemTitle(with title: String) {
         self.title.text = title
     }
     
-    func setItemWith(subTitle: String) {
+    func setItemSubtitle(with subTitle: String) {
         self.subTitle.text = subTitle
     }
 
-    func setItemWith(image: String) {
-        itemImage.image = UIImage(named: image)
+    func setItemImage(with imageName: String) {
+        itemImage.image = UIImage(named: imageName)
     }
     
     func setCellData(with model: HorizentalScrollItemList) {
-        innerView.backgroundColor = UIColor.hexStringToUIColor(hex: model.innerViewColorHex)
-        title.text = model.title
-        subTitle.text = model.subTitle
-        itemImage.image = UIImage(named: model.itemImage)
+        setInnerViewColor(with: model.innerViewColorHex)
+        setItemTitle(with: model.title)
+        setItemSubtitle(with: model.subTitle)
+        setItemImage(with: model.itemImage)
     }
 }
