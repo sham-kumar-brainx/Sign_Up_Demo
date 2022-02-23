@@ -1166,6 +1166,9 @@
                                                                         </constraints>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" image="Control Switch Unselected"/>
+                                                                        <connections>
+                                                                            <action selector="controlSwithTaped:" destination="6w2-db-4hT" eventType="touchUpInside" id="uh9-OU-3o2"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1391,9 +1394,13 @@
                             <outlet property="addressView" destination="Dqv-Sp-Ruw" id="Y0H-jl-Taj"/>
                             <outlet property="asapCheckboxView" destination="fLH-QK-03W" id="s3n-LU-S6l"/>
                             <outlet property="contactView" destination="gBK-Mf-wuX" id="Csk-bU-zYq"/>
+                            <outlet property="controlSwitchButton" destination="1VH-SA-GeN" id="kLW-5k-Yqi"/>
                             <outlet property="deliveryView" destination="Gzm-cy-xGe" id="c8S-VM-jRi"/>
                             <outlet property="discountsView" destination="q0u-Ro-1OI" id="ITQ-zE-krj"/>
                             <outlet property="fiveDollar" destination="mXK-we-9Gy" id="y52-px-bFZ"/>
+                            <outlet property="heightForInvoiceTaxView" destination="HfH-JU-RF4" id="rI0-Y7-TYS"/>
+                            <outlet property="heightForScrollContentView" destination="oG2-7v-env" id="eNW-kv-aKB"/>
+                            <outlet property="invoiceTaxView" destination="Qkl-Nj-suR" id="bqB-ev-59s"/>
                             <outlet property="otherDollar" destination="Kga-Tm-M6Y" id="BXe-co-eR4"/>
                             <outlet property="paymentButtonView" destination="3e1-ib-jlv" id="xA1-aE-P8p"/>
                             <outlet property="paymentMethodView" destination="bCJ-s6-YDF" id="SCL-AJ-7dK"/>

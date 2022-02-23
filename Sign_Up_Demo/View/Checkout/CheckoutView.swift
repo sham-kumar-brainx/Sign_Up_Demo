@@ -22,8 +22,11 @@ class CheckoutView: UIView {
     @IBOutlet weak var tenDollar: TipsUIButton!
     @IBOutlet weak var otherDollar: TipsUIButton!
     @IBOutlet weak var tipsButtonStackView: UIStackView!
+    @IBOutlet weak var heightForInvoiceTaxView: NSLayoutConstraint!
+    @IBOutlet weak var invoiceTaxView: UIView!
+    @IBOutlet weak var heightForScrollContentView: NSLayoutConstraint!
+    @IBOutlet weak var controlSwitchButton: UIButton!
     
-
     // MARK: - Lifecycle Methods
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -56,5 +59,9 @@ class CheckoutView: UIView {
         tenDollar.setData(title: LocalizedKey.tenDollar.string, isSelected: false)
         otherDollar.setData(title: LocalizedKey.otherDollar.string, isSelected: false)
         tipsButtonStackView.layer.cornerRadius = 4
+    }
+    
+    func toggleControlSwitch(shouldSelect: Bool) {
+        shouldSelect ? controlSwitchButton.setImage(UIImage(named: LocalizedKey.selectedControlSwitch.string), for: .normal) : controlSwitchButton.setImage(UIImage(named: LocalizedKey.unselectedControlSwitch.string), for: .normal)
     }
 }

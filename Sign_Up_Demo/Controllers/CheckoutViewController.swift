@@ -7,7 +7,8 @@ class CheckoutViewController: BaseViewController {
     
     // MARK: - Private Properties
     private var tipsButton = TipsButton.allCases
-
+    private var isControllSwitchSelected = false
+    
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,10 @@ class CheckoutViewController: BaseViewController {
     @IBAction
     func crossButtonTaped(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+    @IBAction func controlSwithTaped(_ sender: UIButton) {
+        isControllSwitchSelected = !isControllSwitchSelected
+        checkoutView.toggleControlSwitch(shouldSelect: isControllSwitchSelected)
     }
     
     @objc
