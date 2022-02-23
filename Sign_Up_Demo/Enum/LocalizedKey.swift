@@ -56,4 +56,8 @@ enum LocalizedKey: String {
     case promoCode = "Promo Code"
     case unselectedControlSwitch = "Control Switch Unselected"
     case selectedControlSwitch = "Control Switch Selected"
+    case zeroDollar = "$0"
+    case fiveDollar = "$5"
+    case tenDollar = "$10"
+    case otherDollar = "Other"
 }
