@@ -33,29 +33,30 @@ class CheckoutViewController: BaseViewController {
     }
     
     @objc
-    func sideMenuActionTapped(_ sender: UIGestureRecognizer) {
-        guard let index = sender.view?.tag else { return }
-        setTappedButton(checkBoxes[index])
+    func asapCheckBoxTapped(_ sender: UIGestureRecognizer) {
+        checkoutView.asapCheckboxView.setCheckboxImage(LocalizedKey.filledCircle.string)
+        checkoutView.scheduleCheckboxView.setCheckboxImage(LocalizedKey.emptyCircle.string)
+        checkoutView.pickUpCheckboxView.setCheckboxImage(LocalizedKey.emptyCircle.string)
+    }
+    
+    @objc
+    func scheduleCheckboxViewTapped(_ sender: UIGestureRecognizer) {
+        checkoutView.asapCheckboxView.setCheckboxImage(LocalizedKey.emptyCircle.string)
+        checkoutView.scheduleCheckboxView.setCheckboxImage(LocalizedKey.filledCircle.string)
+        checkoutView.pickUpCheckboxView.setCheckboxImage(LocalizedKey.emptyCircle.string)
+    }
+    
+    @objc
+    func pickUpCheckboxViewTapped(_ sender: UIGestureRecognizer) {
+        checkoutView.asapCheckboxView.setCheckboxImage(LocalizedKey.emptyCircle.string)
+        checkoutView.scheduleCheckboxView.setCheckboxImage(LocalizedKey.emptyCircle.string)
+        checkoutView.pickUpCheckboxView.setCheckboxImage(LocalizedKey.filledCircle.string)
     }
     
     // MARK: - Private Methods
     private func configureOnLoad(){
-        checkoutView.asapCheckboxView.addTapAction(#selector(sideMenuActionTapped(_:)),target: self)
-        checkoutView.scheduleCheckboxView.addTapAction(#selector(sideMenuActionTapped(_:)),target: self)
-        checkoutView.pickUpCheckboxView.addTapAction(#selector(sideMenuActionTapped(_:)),target: self)
-    }
-    
-    // MARK: - Internal Methods
-    func setTappedButton(_ tab: CheckBoxes) {
-//        switch tab {
-//        case .asap:
-//            <#code#>
-//        case .schedule:
-//            <#code#>
-//        case .pickUP:
-//            <#code#>
-//        case .none:
-//            <#code#>
-//        }
+        checkoutView.asapCheckboxView.addTapAction(#selector(asapCheckBoxTapped(_:)),target: self)
+        checkoutView.scheduleCheckboxView.addTapAction(#selector(scheduleCheckboxViewTapped(_:)),target: self)
+        checkoutView.pickUpCheckboxView.addTapAction(#selector(pickUpCheckboxViewTapped(_:)),target: self)
     }
 }

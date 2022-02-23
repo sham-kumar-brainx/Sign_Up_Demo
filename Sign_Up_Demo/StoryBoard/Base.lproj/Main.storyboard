@@ -971,7 +971,7 @@
                                         <rect key="frame" x="0.0" y="60" width="414" height="758"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIw-wi-EAm" userLabel="Scroll Content View">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="940"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQg-e3-fBT" userLabel="Delivery Details View">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
@@ -1183,7 +1183,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JjC-3w-uj7" userLabel="Total View">
-                                                        <rect key="frame" x="0.0" y="574" width="414" height="366"/>
+                                                        <rect key="frame" x="0.0" y="574" width="414" height="326"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6B8-mD-eZ1">
                                                                 <rect key="frame" x="16.000000000000004" y="15.999999999999998" width="38.333333333333343" height="19.333333333333329"/>
@@ -1283,7 +1283,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="ae3-2g-sDv" secondAttribute="trailing" id="hBg-aN-bEO"/>
                                                     <constraint firstAttribute="bottom" secondItem="JjC-3w-uj7" secondAttribute="bottom" id="kGs-3N-Lyq"/>
                                                     <constraint firstItem="cDW-j7-YZp" firstAttribute="leading" secondItem="NIw-wi-EAm" secondAttribute="leading" id="mSL-ol-d76"/>
-                                                    <constraint firstAttribute="height" constant="940" id="oG2-7v-env"/>
+                                                    <constraint firstAttribute="height" constant="900" id="oG2-7v-env"/>
                                                     <constraint firstAttribute="trailing" secondItem="iQg-e3-fBT" secondAttribute="trailing" id="odu-Nd-Jvt"/>
                                                     <constraint firstItem="iQg-e3-fBT" firstAttribute="top" secondItem="NIw-wi-EAm" secondAttribute="top" id="taO-cU-rBV"/>
                                                     <constraint firstAttribute="trailing" secondItem="cDW-j7-YZp" secondAttribute="trailing" id="vjR-Ts-Qof"/>
