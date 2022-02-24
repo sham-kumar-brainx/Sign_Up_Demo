@@ -31,7 +31,8 @@ class HomeViewController: BaseViewController {
     }
     
     // MARK: - Action Methods
-    @IBAction func sideMenuImageTaped(_ sender: UIButton) {
+    @IBAction
+    func sideMenuImageTaped(_ sender: UIButton) {
         revealViewController()?.revealSideMenu()
     }
     

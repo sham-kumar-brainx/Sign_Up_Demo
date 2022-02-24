@@ -6,14 +6,14 @@ class VerticalCollectionCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageTitle: UILabel!
     
-    // MARK: - LifeCycle Methods
+    // MARK: - Lifecycle Methods
     override func awakeFromNib() {
         super.awakeFromNib()
-        configure()
+        configureView()
     }
     
     // MARK: - Private Methods
-    private func configure() {
+    private func configureView() {
         imageTitle.layer.masksToBounds = true
         imageTitle.layer.cornerRadius = 10
     }

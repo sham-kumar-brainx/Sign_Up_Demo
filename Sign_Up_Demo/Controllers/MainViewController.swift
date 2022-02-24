@@ -19,7 +19,7 @@ class MainViewController: BaseViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         configureView()
     }
-   
+    
     // MARK: - Private Methods
     private func configureView() {
         setSideMenuShadowView()
@@ -64,9 +64,9 @@ class MainViewController: BaseViewController, UIGestureRecognizerDelegate {
         sideMenuViewController = SideMenuViewController.instantiate(from: .main)
         sideMenuViewController.defaultSelectedTab = 0
         sideMenuViewController.delegate = self
-        view.insertSubview(sideMenuViewController!.view, at: revealSideMenuOnTop ? 2 : 0)
-        addChild(sideMenuViewController!)
-        sideMenuViewController!.didMove(toParent: self)
+        view.insertSubview(sideMenuViewController.view ?? UIView(), at: revealSideMenuOnTop ? 2 : 0)
+        addChild(sideMenuViewController)
+        sideMenuViewController.didMove(toParent: self)
         sideMenuViewController.view.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -102,7 +102,7 @@ class MainViewController: BaseViewController, UIGestureRecognizerDelegate {
             }
         }, completion: completion)
     }
-
+    
     private func showViewController<T: UIViewController>(viewController: T.Type) -> () {
         for subview in view.subviews {
             if subview.tag == 99 {
@@ -221,11 +221,11 @@ extension MainViewController: SideMenuViewControllerDelegate {
         case .payment:
             showViewController(viewController: PaymentViewController.self)
         case .addresses:
-            print("Addresses Tab")
+            showViewController(viewController: HomeViewController.self)
         case .shops:
-            print("Shops Tab")
+            showViewController(viewController: HomeViewController.self)
         case .settings:
-            print("Settings Tab")
+            showViewController(viewController: HomeViewController.self)
         default:
             return
         }

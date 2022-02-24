@@ -9,7 +9,7 @@ class HorizontalCollectionCell: UICollectionViewCell {
     @IBOutlet weak var subTitle: UILabel!
     @IBOutlet weak var itemImage: UIImageView!
     
-    // MARK: - LifeCycle Methods
+    // MARK: - Lifecycle Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         configureView()

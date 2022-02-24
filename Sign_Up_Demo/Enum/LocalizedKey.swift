@@ -33,4 +33,5 @@ enum LocalizedKey: String {
     case settings = "Settings"
     case forward = "Forward"
     case cross = "Cross"
+    case sideMenuActionView = "SideMenuActionView"    
 }
