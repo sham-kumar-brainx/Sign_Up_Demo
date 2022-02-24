@@ -65,7 +65,7 @@ extension SignUpViewController {
     }
     
     private func pideBienMainScreen() {
-        let customPideBienViewController = HomeViewController.instantiate(from: .main)
-        navigationController?.pushViewController(customPideBienViewController, animated: true)
+        let mainViewController = MainViewController.instantiate(from: .main)
+        navigationController?.pushViewController(mainViewController, animated: true)
     }
 }

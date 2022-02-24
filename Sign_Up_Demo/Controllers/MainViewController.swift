@@ -19,7 +19,7 @@ class MainViewController: BaseViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         configureView()
     }
-   
+    
     // MARK: - Private Methods
     private func configureView() {
         setSideMenuShadowView()
@@ -102,7 +102,7 @@ class MainViewController: BaseViewController, UIGestureRecognizerDelegate {
             }
         }, completion: completion)
     }
-
+    
     private func showViewController<T: UIViewController>(viewController: T.Type) -> () {
         for subview in view.subviews {
             if subview.tag == 99 {
@@ -221,11 +221,11 @@ extension MainViewController: SideMenuViewControllerDelegate {
         case .payment:
             showViewController(viewController: PaymentViewController.self)
         case .addresses:
-            print("Addresses Tab")
+            showViewController(viewController: HomeViewController.self)
         case .shops:
-            print("Shops Tab")
+            showViewController(viewController: HomeViewController.self)
         case .settings:
-            print("Settings Tab")
+            showViewController(viewController: HomeViewController.self)
         default:
             return
         }
