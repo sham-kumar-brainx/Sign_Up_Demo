@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HorizontalCollectionCell" id="lk6-WL-qKM" customClass="HorizontalCollectionCell" customModule="Sign_Up_Demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="248"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="342" height="248"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZbO-3Z-Wu3" userLabel="Innner View">
+                        <rect key="frame" x="0.0" y="0.0" width="342" height="165"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NICELY NONDAIRY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iE-O0-5ir" userLabel="Title Label">
+                                <rect key="frame" x="16" y="35" width="146" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say yes to sips of" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCK-qy-toH" userLabel="Sub Title Label">
+                                <rect key="frame" x="16" y="66" width="102" height="15"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="165" id="31Z-7U-TrR"/>
+                            <constraint firstItem="SCK-qy-toH" firstAttribute="leading" secondItem="ZbO-3Z-Wu3" secondAttribute="leading" constant="16" id="Eph-ma-1Nx"/>
+                            <constraint firstItem="SCK-qy-toH" firstAttribute="top" secondItem="1iE-O0-5ir" secondAttribute="bottom" constant="11" id="M9E-JQ-fnN"/>
+                            <constraint firstItem="1iE-O0-5ir" firstAttribute="leading" secondItem="ZbO-3Z-Wu3" secondAttribute="leading" constant="16" id="TmO-SR-9Kp"/>
+                            <constraint firstItem="1iE-O0-5ir" firstAttribute="top" secondItem="ZbO-3Z-Wu3" secondAttribute="top" constant="35" id="tG7-ri-tvL"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cup Glass" translatesAutoresizingMaskIntoConstraints="NO" id="o4M-XR-zun" userLabel="Horizetal Image View">
+                        <rect key="frame" x="139" y="72" width="203" height="176"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="203" id="lRQ-5j-JuL"/>
+                            <constraint firstAttribute="height" constant="176" id="otT-7K-Vav"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="g28-1t-R7n"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="o4M-XR-zun" secondAttribute="trailing" id="5fU-8J-ndl"/>
+                <constraint firstItem="ZbO-3Z-Wu3" firstAttribute="leading" secondItem="lk6-WL-qKM" secondAttribute="leading" id="67E-ig-XNI"/>
+                <constraint firstAttribute="trailing" secondItem="ZbO-3Z-Wu3" secondAttribute="trailing" id="fn5-mB-2hj"/>
+                <constraint firstItem="ZbO-3Z-Wu3" firstAttribute="top" secondItem="lk6-WL-qKM" secondAttribute="top" id="pVn-AH-JPV"/>
+                <constraint firstAttribute="bottom" secondItem="o4M-XR-zun" secondAttribute="bottom" id="r8B-If-DsQ"/>
+            </constraints>
+            <size key="customSize" width="342" height="248"/>
+            <connections>
+                <outlet property="innerView" destination="ZbO-3Z-Wu3" id="XNX-Ui-5qz"/>
+                <outlet property="itemImage" destination="o4M-XR-zun" id="qZc-DW-8rl"/>
+                <outlet property="subTitle" destination="SCK-qy-toH" id="bcx-Vv-fCW"/>
+                <outlet property="title" destination="1iE-O0-5ir" id="NyP-Sa-8xC"/>
+            </connections>
+            <point key="canvasLocation" x="66.666666666666671" y="102.45535714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Cup Glass" width="203" height="176"/>
+    </resources>
+</document>

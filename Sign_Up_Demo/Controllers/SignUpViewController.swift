@@ -1,43 +1,51 @@
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: BaseViewController, UIGestureRecognizerDelegate {
     
-    // MARK: Outlets
+    // MARK: - Outlets
     @IBOutlet weak var signUpView: SignUpView!
     
-    // MARK: Private Properties
-    var user: User?
+    // MARK: - Private Properties
+    private var user: User?
 }
 
-// MARK: Extention
+// MARK: - Extention
 extension SignUpViewController {
     
-    // MARK: Actions Methods
+    // MARK: - Actions Methods
     @IBAction
     func buttonSignUp(_ sender: UIButton) {
         setSignupData()
         let validationState = validateData()
         switch validationState {
         case .valid:
-            proceedToUserDetailViewController()
+            pideBienMainScreen()
         case let .invalid(message):
             showAlertWith(message: message)
         }
     }
     
-    // MARK: Private Methods
+    @IBAction
+    func appleSignUpPressed(_ sender: UIButton) {
+        pideBienMainScreen()
+    }
+    
+    @IBAction
+    func faceBookSignUpPressed(_ sender: UIButton) {
+        pideBienMainScreen()
+    }
+    
+    // MARK: - Private Methods
     private func setSignupData() {
         guard let firstName = signUpView.txfFirstName.text,
               let lastName = signUpView.txfLastName.text,
               let email = signUpView.txfEmail.text,
               let password = signUpView.txfPassword.text,
-              let phoneNumber = signUpView.txfPhone.text else {
-                  return
-              }
+              let phoneNumber = signUpView.txfPhone.text else { return }
         user = User(firstName: firstName, lastName: lastName, email: email, password: password, phoneNumber: phoneNumber)
     }
     
-    func validateData() -> TextFieldValidationStatus {
+    private func validateData() -> TextFieldValidationStatus {
         if user?.firstName.isEmpty ?? true || !(user?.firstName.isValidText ?? true) {
             return TextFieldValidationStatus.invalid(message: AppConstants.firstNameInavlidMessage)
         }
@@ -56,9 +64,8 @@ extension SignUpViewController {
         return .valid
     }
     
-    private func proceedToUserDetailViewController() {
-        let userDetailViewController = UIViewController.instantiate(UserDetailViewController.self, fromStoryboard: .Main)
-        userDetailViewController.details = user?.description
-        self.present(userDetailViewController, animated:true, completion:nil)
+    private func pideBienMainScreen() {
+        let customPideBienViewController = HomeViewController.instantiate(from: .main)
+        navigationController?.pushViewController(customPideBienViewController, animated: true)
     }
 }

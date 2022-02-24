@@ -1,8 +1,9 @@
 import UIKit
 
+// MARK: - Extenstion for CALayer
 extension CALayer {
     
-    // MARK: Methods
+    // MARK: - Internal Methods
     func applySketchShadow(
         color: UIColor = .black,
         alpha: Float = 0.5,
