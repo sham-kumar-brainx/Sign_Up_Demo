@@ -1,12 +1,11 @@
 import UIKit
 
-class BaseViewController: UIViewController, UIGestureRecognizerDelegate {
+class BaseViewController: UIViewController {
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         disableDarkMode()
-        navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
     
     // MARK: - Private Methods

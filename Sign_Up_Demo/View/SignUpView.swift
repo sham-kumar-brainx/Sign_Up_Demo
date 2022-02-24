@@ -58,7 +58,7 @@ extension SignUpView {
     private func customizeLabel(label: UILabel) {
         var mutableString = NSMutableAttributedString()
         let style = NSMutableParagraphStyle()
-        mutableString = NSMutableAttributedString(string: lblInstructions.text ?? "", attributes: [NSAttributedString.Key.font:UIFont(name: "Georgia", size: 12.0)!])
+        mutableString = NSMutableAttributedString(string: lblInstructions.text ?? "", attributes: [NSAttributedString.Key.font: UIFont(name: AppConstants.georgia, size: 12.0)])
         mutableString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.hexStringToUIColor(hex: AppConstants.orangeColorHex), range: NSRange(location: 110, length: 14))
         mutableString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.hexStringToUIColor(hex: AppConstants.orangeColorHex), range: NSRange(location: 85, length: 20))
         style.lineSpacing = 10

@@ -321,7 +321,6 @@
                     <navigationItem key="navigationItem" id="c3u-Sb-ofo"/>
                     <connections>
                         <outlet property="signUpView" destination="8bC-Xf-vdC" id="h1s-FM-M3N"/>
-                        <segue destination="oVq-ri-xfN" kind="show" identifier="detailViewController" id="O9Q-X1-Xdc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -694,9 +693,6 @@
                             <outlet property="hsv4Item2" destination="3tB-zO-9dQ" id="qar-9Q-Ld8"/>
                             <outlet property="sideMenuLogo" destination="kjM-6f-azz" id="JfT-uQ-XIq"/>
                             <outlet property="topView" destination="GIc-d4-KDS" id="QK7-dP-ZxV"/>
-                            <outlet property="view1" destination="sHV-Mf-PVv" id="4cu-QE-e6j"/>
-                            <outlet property="view2" destination="AIZ-vf-OI7" id="YLG-F7-60I"/>
-                            <outlet property="view3" destination="xom-hq-Uxp" id="Fa8-j3-EPR"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="43V-Y4-OPi"/>

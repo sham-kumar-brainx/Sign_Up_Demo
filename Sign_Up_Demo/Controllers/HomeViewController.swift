@@ -39,8 +39,8 @@ class HomeViewController: BaseViewController {
     private func setUpCollectionView() {
         collectionView.register(HorizontalCollectionCell.nib(), forCellWithReuseIdentifier: HorizontalCollectionCell.reuseIdentifier)
         collectionView.register(VerticalCollectionCell.nib(), forCellWithReuseIdentifier: VerticalCollectionCell.reuseIdentifier)
-        collectionView.register(HeaderCollectionReusableView.nibForHeaterAndFooter(), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.reuseIdentifierForHeaterAndFooter)
-        collectionView.register(FooterCollectionReuseableView.nibForHeaterAndFooter(), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FooterCollectionReuseableView.reuseIdentifierForHeaterAndFooter)
+        collectionView.register(HeaderCollectionReusableView.nibForHeaderAndFooter(), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.reuseIdentifierForHeaderAndFooter)
+        collectionView.register(FooterCollectionReuseableView.nibForHeaderAndFooter(), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FooterCollectionReuseableView.reuseIdentifierForHeaderAndFooter)
         collectionView.collectionViewLayout = compositionalLayout
         collectionView.dataSource = self
         collectionView.contentInsetAdjustmentBehavior = .scrollableAxes
@@ -117,10 +117,10 @@ extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == UICollectionView.elementKindSectionHeader {
-            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.reuseIdentifierForHeaterAndFooter, for: indexPath) as! HeaderCollectionReusableView
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.reuseIdentifierForHeaderAndFooter, for: indexPath) as! HeaderCollectionReusableView
             return headerView
         } else {
-            let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FooterCollectionReuseableView.reuseIdentifierForHeaterAndFooter, for: indexPath) as! FooterCollectionReuseableView
+            let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FooterCollectionReuseableView.reuseIdentifierForHeaderAndFooter, for: indexPath) as! FooterCollectionReuseableView
             return footerView
         }
     }

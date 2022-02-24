@@ -1,6 +1,6 @@
 import UIKit
 
-class MainViewController: BaseViewController {
+class MainViewController: BaseViewController, UIGestureRecognizerDelegate {
     
     // MARK: - Private Properties
     private var sideMenuViewController: SideMenuViewController!

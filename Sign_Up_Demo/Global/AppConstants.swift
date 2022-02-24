@@ -22,4 +22,5 @@ struct AppConstants {
     static let alertTitle = "Alert"
     static let alertActionOk = "OK"
     static let sideMenuWidth = 348
+    static let georgia = "Georgia"
 }
