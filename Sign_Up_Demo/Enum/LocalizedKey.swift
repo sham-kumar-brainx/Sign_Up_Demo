@@ -60,4 +60,5 @@ enum LocalizedKey: String {
     case fiveDollar = "$5"
     case tenDollar = "$10"
     case otherDollar = "Other"
+    case sideMenuActionView = "SideMenuActionView"    
 }

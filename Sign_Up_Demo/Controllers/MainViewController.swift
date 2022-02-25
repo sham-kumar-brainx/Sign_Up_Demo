@@ -1,6 +1,6 @@
 import UIKit
 
-class MainViewController: BaseViewController {
+class MainViewController: BaseViewController, UIGestureRecognizerDelegate {
     
     // MARK: - Private Properties
     private var sideMenuViewController: SideMenuViewController!
@@ -64,9 +64,9 @@ class MainViewController: BaseViewController {
         sideMenuViewController = SideMenuViewController.instantiate(from: .main)
         sideMenuViewController.defaultSelectedTab = 0
         sideMenuViewController.delegate = self
-        view.insertSubview(sideMenuViewController!.view, at: revealSideMenuOnTop ? 2 : 0)
-        addChild(sideMenuViewController!)
-        sideMenuViewController!.didMove(toParent: self)
+        view.insertSubview(sideMenuViewController.view ?? UIView(), at: revealSideMenuOnTop ? 2 : 0)
+        addChild(sideMenuViewController)
+        sideMenuViewController.didMove(toParent: self)
         sideMenuViewController.view.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -215,17 +215,17 @@ extension MainViewController: SideMenuViewControllerDelegate {
     func openSelectedTab(_ tab: SideMenuTabs) {
         switch tab {
         case .home:
-            showViewController(viewController: CustomPideBienViewController.self)
+            showViewController(viewController: HomeViewController.self)
         case .myOrders:
             showViewController(viewController: MyOrdersViewController.self)
         case .payment:
             showViewController(viewController: PaymentViewController.self)
         case .addresses:
-            print("Addresses Tab")
+            showViewController(viewController: HomeViewController.self)
         case .shops:
-            print("Shops Tab")
+            showViewController(viewController: HomeViewController.self)
         case .settings:
-            print("Settings Tab")
+            showViewController(viewController: HomeViewController.self)
         default:
             return
         }

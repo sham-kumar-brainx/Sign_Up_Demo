@@ -12,16 +12,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     setRootViewController()
   }
   
-  func sceneDidDisconnect(_ scene: UIScene) { }
-  
-  func sceneDidBecomeActive(_ scene: UIScene) { }
-  
-  func sceneWillResignActive(_ scene: UIScene) { }
-  
-  func sceneWillEnterForeground(_ scene: UIScene) { }
-  
-  func sceneDidEnterBackground(_ scene: UIScene) { }
-  
   // MARK: - Private Methods
   private func setRootViewController() {
     var viewController: BaseViewController
