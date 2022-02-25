@@ -327,6 +327,21 @@
             </objects>
             <point key="canvasLocation" x="1827.5362318840582" y="82.366071428571431"/>
         </scene>
+        <!--Main View Controller-->
+        <scene sceneID="UCd-AU-jkp">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="HOc-vz-aMP" customClass="MainViewController" customModule="Sign_Up_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Div-hg-cse">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="86x-tk-ldm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xHd-xd-iOj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3113" y="82"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="RAr-mx-jpv">
             <objects>
@@ -508,21 +523,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldv-0N-EUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1828" y="755"/>
-        </scene>
-        <!--Main View Controller-->
-        <scene sceneID="UCd-AU-jkp">
-            <objects>
-                <viewController storyboardIdentifier="MainViewController" id="HOc-vz-aMP" customClass="MainViewController" customModule="Sign_Up_Demo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Div-hg-cse">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="86x-tk-ldm"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xHd-xd-iOj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3113" y="82"/>
         </scene>
         <!--Side Menu View Controller-->
         <scene sceneID="1QK-X7-rc8">
@@ -1202,7 +1202,69 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="46C-OG-vAG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2611.594202898551" y="1465.8482142857142"/>
+            <point key="canvasLocation" x="1828" y="1418"/>
+        </scene>
+        <!--Order Summary View Controller-->
+        <scene sceneID="NhS-MX-h3e">
+            <objects>
+                <viewController storyboardIdentifier="OrderSummaryViewController" id="0NI-9r-VJh" customClass="OrderSummaryViewController" customModule="Sign_Up_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jUX-Qg-jH0" customClass="OrderSummaryView" customModule="Sign_Up_Demo" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JIP-9n-tHR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJh-Sk-iwt" userLabel="Order Summary Content View">
+                                <rect key="frame" x="0.0" y="536" width="414" height="360"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R62-ns-NDF">
+                                        <rect key="frame" x="248" y="262" width="150" height="48"/>
+                                        <color key="backgroundColor" red="0.98823529409999999" green="0.47450980390000003" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="8SK-Ur-ip7"/>
+                                            <constraint firstAttribute="width" constant="150" id="Wma-Qb-FpM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Proceed">
+                                            <color key="titleColor" red="0.92156862750000001" green="0.92156862750000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="proceedPressed:" destination="0NI-9r-VJh" eventType="touchUpInside" id="NkX-FU-13t"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="R62-ns-NDF" secondAttribute="bottom" constant="50" id="8Pa-D2-qcX"/>
+                                    <constraint firstAttribute="trailing" secondItem="R62-ns-NDF" secondAttribute="trailing" constant="16" id="m05-ey-pMI"/>
+                                    <constraint firstAttribute="height" constant="360" id="xvp-k4-HXi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CdO-al-Z6n"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HJh-Sk-iwt" firstAttribute="leading" secondItem="CdO-al-Z6n" secondAttribute="leading" id="EhW-n3-mMI"/>
+                            <constraint firstItem="HJh-Sk-iwt" firstAttribute="bottom" secondItem="JIP-9n-tHR" secondAttribute="bottom" id="PdX-F2-CyQ"/>
+                            <constraint firstItem="HJh-Sk-iwt" firstAttribute="trailing" secondItem="CdO-al-Z6n" secondAttribute="trailing" id="Uc6-oq-tR4"/>
+                            <constraint firstAttribute="bottom" secondItem="HJh-Sk-iwt" secondAttribute="bottom" id="XUm-7t-KH7"/>
+                            <constraint firstItem="CdO-al-Z6n" firstAttribute="trailing" secondItem="JIP-9n-tHR" secondAttribute="trailing" id="ejo-aY-wIh"/>
+                            <constraint firstItem="JIP-9n-tHR" firstAttribute="top" secondItem="jUX-Qg-jH0" secondAttribute="top" id="i5K-bx-5lD"/>
+                            <constraint firstItem="JIP-9n-tHR" firstAttribute="leading" secondItem="CdO-al-Z6n" secondAttribute="leading" id="kB0-Yj-0Sm"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="blurContentView" destination="JIP-9n-tHR" id="7gA-2O-ymS"/>
+                            <outlet property="orderSummaryContentView" destination="HJh-Sk-iwt" id="hxA-4c-wE3"/>
+                            <outlet property="proceed" destination="R62-ns-NDF" id="a0t-Bq-Box"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O9N-Cq-hd0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2474" y="1418"/>
         </scene>
     </scenes>
     <resources>

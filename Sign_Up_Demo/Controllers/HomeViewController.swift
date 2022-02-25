@@ -2,6 +2,14 @@ import UIKit
 
 class HomeViewController: BaseViewController {
     
+    // MARK: - Private Properties
+    private var sideMenuViewController: SideMenuViewController!
+    private var sideMenuShadowView: UIView!
+    private var sideMenuRevealWidth: CGFloat = CGFloat(AppConstants.sideMenuWidth)
+    private var isExpanded: Bool = false
+    private var sideMenuTrailingConstraint: NSLayoutConstraint!
+    private var revealSideMenuOnTop: Bool = true
+    
     // MARK: - Outlets
     @IBOutlet var pidebienMainScreenView: PidenBienMainScreenView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -39,7 +47,7 @@ class HomeViewController: BaseViewController {
     
     @objc
     func cartButtonViewTapped(_ sender: UIGestureRecognizer) {
-        openCheckoutViewController()
+        openOrderSummaryViewController()
     }
     
     // MARK: - Private Methods
@@ -52,11 +60,13 @@ class HomeViewController: BaseViewController {
         collectionView.dataSource = self
         collectionView.contentInsetAdjustmentBehavior = .scrollableAxes
     }
-    
-    private func openCheckoutViewController() {
-        let checkoutViewController = CheckoutViewController.instantiate(from: .main)
-        navigationController?.pushViewController(checkoutViewController, animated: true)
+
+    private func openOrderSummaryViewController() {
+        let orderSummaryViewController = OrderSummaryViewController.instantiate(from: .main)
+        orderSummaryViewController.modalPresentationStyle = .overCurrentContext
+        present(orderSummaryViewController, animated: true, completion: nil)
     }
+
     
     // MARK: - Internal Methods
     func setupHorizontalScrollSection() -> NSCollectionLayoutSection {
