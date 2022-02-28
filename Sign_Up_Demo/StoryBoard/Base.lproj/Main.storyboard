@@ -1219,6 +1219,29 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJh-Sk-iwt" userLabel="Order Summary Content View">
                                 <rect key="frame" x="0.0" y="536" width="414" height="360"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0rder Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="em0-J1-DR5">
+                                        <rect key="frame" x="146" y="24" width="122" height="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOf-ob-iN8">
+                                        <rect key="frame" x="310" y="50" width="92" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Add more Items">
+                                            <color key="titleColor" red="0.098039215690000001" green="0.1215686275" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GAe-6Y-G3v" userLabel="Order Summay Table">
+                                        <rect key="frame" x="0.0" y="82" width="414" height="160"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="0NI-9r-VJh" id="0n0-Hf-OWp"/>
+                                            <outlet property="delegate" destination="0NI-9r-VJh" id="Tag-Fg-veq"/>
+                                        </connections>
+                                    </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R62-ns-NDF">
                                         <rect key="frame" x="248" y="262" width="150" height="48"/>
                                         <color key="backgroundColor" red="0.98823529409999999" green="0.47450980390000003" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1239,7 +1262,15 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="R62-ns-NDF" secondAttribute="bottom" constant="50" id="8Pa-D2-qcX"/>
+                                    <constraint firstItem="em0-J1-DR5" firstAttribute="centerX" secondItem="HJh-Sk-iwt" secondAttribute="centerX" id="S5U-AB-acm"/>
+                                    <constraint firstAttribute="trailing" secondItem="GAe-6Y-G3v" secondAttribute="trailing" id="UoX-RI-uBW"/>
+                                    <constraint firstItem="em0-J1-DR5" firstAttribute="top" secondItem="HJh-Sk-iwt" secondAttribute="top" constant="24" id="YS3-lG-9q2"/>
+                                    <constraint firstItem="GAe-6Y-G3v" firstAttribute="leading" secondItem="HJh-Sk-iwt" secondAttribute="leading" id="Yp5-yn-HQo"/>
+                                    <constraint firstItem="dOf-ob-iN8" firstAttribute="top" secondItem="em0-J1-DR5" secondAttribute="top" constant="26" id="h9d-0S-nQb"/>
+                                    <constraint firstItem="R62-ns-NDF" firstAttribute="top" secondItem="GAe-6Y-G3v" secondAttribute="bottom" constant="20" id="lfa-PF-i1A"/>
                                     <constraint firstAttribute="trailing" secondItem="R62-ns-NDF" secondAttribute="trailing" constant="16" id="m05-ey-pMI"/>
+                                    <constraint firstItem="GAe-6Y-G3v" firstAttribute="top" secondItem="dOf-ob-iN8" secondAttribute="bottom" constant="5" id="wwT-ha-Vsu"/>
+                                    <constraint firstAttribute="trailing" secondItem="dOf-ob-iN8" secondAttribute="trailing" constant="12" id="x2w-8h-AnK"/>
                                     <constraint firstAttribute="height" constant="360" id="xvp-k4-HXi"/>
                                 </constraints>
                             </view>
@@ -1256,15 +1287,20 @@
                             <constraint firstItem="JIP-9n-tHR" firstAttribute="leading" secondItem="CdO-al-Z6n" secondAttribute="leading" id="kB0-Yj-0Sm"/>
                         </constraints>
                         <connections>
+                            <outlet property="addMoreItem" destination="dOf-ob-iN8" id="1aT-D5-6Vx"/>
                             <outlet property="blurContentView" destination="JIP-9n-tHR" id="7gA-2O-ymS"/>
                             <outlet property="orderSummaryContentView" destination="HJh-Sk-iwt" id="hxA-4c-wE3"/>
+                            <outlet property="orderSummaryTable" destination="GAe-6Y-G3v" id="I2h-II-w5T"/>
                             <outlet property="proceed" destination="R62-ns-NDF" id="a0t-Bq-Box"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="orderSummaryView" destination="jUX-Qg-jH0" id="E5e-8a-By0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9N-Cq-hd0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2474" y="1418"/>
+            <point key="canvasLocation" x="2473.913043478261" y="1417.6339285714284"/>
         </scene>
     </scenes>
     <resources>

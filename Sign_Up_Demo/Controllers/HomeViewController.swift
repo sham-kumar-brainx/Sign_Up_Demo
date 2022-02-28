@@ -63,6 +63,12 @@ class HomeViewController: BaseViewController {
 
     private func openOrderSummaryViewController() {
         let orderSummaryViewController = OrderSummaryViewController.instantiate(from: .main)
+        
+//        if let sheet = orderSummaryViewController.sheetPresentationController {
+//            sheet.detents = [.medium(), .large()]
+//            // your sheet setup
+//        }
+        
         orderSummaryViewController.modalPresentationStyle = .overCurrentContext
         present(orderSummaryViewController, animated: true, completion: nil)
     }
