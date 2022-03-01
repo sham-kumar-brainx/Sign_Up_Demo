@@ -16,14 +16,4 @@ extension UIView {
         border.frame = CGRect(x: 0, y: self.frame.size.height - borderWidth, width: width, height: borderWidth)
         self.layer.addSublayer(border)
     }
-    
-    func addBlurToView() {
-        self.backgroundColor = .clear
-        var blurEffect: UIBlurEffect?
-        blurEffect = UIBlurEffect(style: .dark)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame =  self.bounds
-        blurEffectView.alpha = 0.5
-        self.addSubview(blurEffectView)
-    }
 }

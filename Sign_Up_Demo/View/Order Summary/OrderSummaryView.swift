@@ -19,6 +19,5 @@ class OrderSummaryView: UIView {
     private func configureView() {
         proceed.layer.cornerRadius = 24
         orderSummaryContentView.layer.cornerRadius = 14
-        blurContentView.addBlurToView()
     }
 }

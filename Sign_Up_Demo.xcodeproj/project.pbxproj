@@ -13,6 +13,7 @@
 		D915746327C3A8E800F120E9 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915746227C3A8E800F120E9 /* SideMenu.swift */; };
 		D915746527C3A95A00F120E9 /* SideMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915746427C3A95A00F120E9 /* SideMenuModel.swift */; };
 		D915746C27C3AE6B00F120E9 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D915746B27C3AE6B00F120E9 /* UITableViewCell.swift */; };
+		D91B681727CE62E4003CF6E9 /* CustomVisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91B681627CE62E4003CF6E9 /* CustomVisualEffectView.swift */; };
 		D920C7DC27C4D3F80046B717 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D920C7DB27C4D3F80046B717 /* CheckoutViewController.swift */; };
 		D920C7DE27C4D67A0046B717 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D920C7DD27C4D67A0046B717 /* CheckoutView.swift */; };
 		D920C7E127C4FD090046B717 /* PaymentDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D920C7E027C4FD090046B717 /* PaymentDetailView.xib */; };
@@ -95,6 +96,7 @@
 		D915746227C3A8E800F120E9 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		D915746427C3A95A00F120E9 /* SideMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuModel.swift; sourceTree = "<group>"; };
 		D915746B27C3AE6B00F120E9 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		D91B681627CE62E4003CF6E9 /* CustomVisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVisualEffectView.swift; sourceTree = "<group>"; };
 		D920C7DB27C4D3F80046B717 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		D920C7DD27C4D67A0046B717 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		D920C7E027C4FD090046B717 /* PaymentDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentDetailView.xib; sourceTree = "<group>"; };
@@ -396,6 +398,7 @@
 				D9FC4F4927C8CA3D00F983A7 /* OrderSummaryView.swift */,
 				D9C5F12527CC9BF10004E3D8 /* OrderSummaryTableCell.swift */,
 				D9C5F12727CC9C050004E3D8 /* OrderSummaryTableCell.xib */,
+				D91B681627CE62E4003CF6E9 /* CustomVisualEffectView.swift */,
 			);
 			path = "Order Summary";
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				D9C1923727706AD00077C782 /* User.swift in Sources */,
 				D9B5112027BCBF400065F19D /* HomeViewController.swift in Sources */,
 				D9FC4F4827C8BEC400F983A7 /* OrderSummaryViewController.swift in Sources */,
+				D91B681727CE62E4003CF6E9 /* CustomVisualEffectView.swift in Sources */,
 				D915746327C3A8E800F120E9 /* SideMenu.swift in Sources */,
 				D983743E27C4ACBD004EAE53 /* AppDelegate.swift in Sources */,
 				D992C051276A4FC0009FB111 /* SignUpViewController.swift in Sources */,

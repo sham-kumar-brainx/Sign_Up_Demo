@@ -57,6 +57,7 @@ class HomeViewController: BaseViewController, OrderSummaryViewControllerDelegate
         let orderSummaryViewController = OrderSummaryViewController.instantiate(from: .main)
         orderSummaryViewController.orderSummaryControllerDelegate = self
         orderSummaryViewController.modalPresentationStyle = .overCurrentContext
+        orderSummaryViewController.modalTransitionStyle = .crossDissolve
         present(orderSummaryViewController, animated: true, completion: nil)
     }
     
@@ -97,6 +98,10 @@ class HomeViewController: BaseViewController, OrderSummaryViewControllerDelegate
     func openCheckoutViewController() {
         let checkoutViewController = CheckoutViewController.instantiate(from: .main)
         navigationController?.pushViewController(checkoutViewController, animated: true)
+    }
+    
+    func removeBlurFromView() {
+        //        pidebienMainScreenView.removeBlurView()
     }
 }
 
@@ -144,4 +149,3 @@ extension HomeViewController: UICollectionViewDataSource {
         }
     }
 }
-
