@@ -1,7 +1,7 @@
 import UIKit
 
 class VerticalCollectionCell: UICollectionViewCell {
-
+    
     // MARK: - Outlets
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageTitle: UILabel!
@@ -17,7 +17,7 @@ class VerticalCollectionCell: UICollectionViewCell {
         imageTitle.layer.masksToBounds = true
         imageTitle.layer.cornerRadius = 10
     }
-
+    
     // MARK: - Internal Methods
     func setImage(with imageName: String) {
         imageView.image = UIImage(named: imageName)

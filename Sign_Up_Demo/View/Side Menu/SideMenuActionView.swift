@@ -7,8 +7,8 @@ class SideMenuActionView: UIView {
     @IBOutlet var sideMenuView: UIView!
     
     // MARK: - private Properties
-    private let nibName = LocalizedKey.sideMenuActionView.string
-        
+    private let nibName = "SideMenuActionView"
+    
     // MARK: - Initializer Methods
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

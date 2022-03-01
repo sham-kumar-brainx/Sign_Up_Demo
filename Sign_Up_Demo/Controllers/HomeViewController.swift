@@ -1,14 +1,6 @@
 import UIKit
 
-class HomeViewController: BaseViewController {
-    
-    // MARK: - Private Properties
-    private var sideMenuViewController: SideMenuViewController!
-    private var sideMenuShadowView: UIView!
-    private var sideMenuRevealWidth: CGFloat = CGFloat(AppConstants.sideMenuWidth)
-    private var isExpanded: Bool = false
-    private var sideMenuTrailingConstraint: NSLayoutConstraint!
-    private var revealSideMenuOnTop: Bool = true
+class HomeViewController: BaseViewController, OrderSummaryViewControllerDelegate {
     
     // MARK: - Outlets
     @IBOutlet var pidebienMainScreenView: PidenBienMainScreenView!
@@ -26,7 +18,7 @@ class HomeViewController: BaseViewController {
             case .verticalScroll:
                 return self?.setupVerticalScrollSection()
             case .none:
-                fatalError("Should not be none")
+                fatalError(LocalizedKey.noneError.string)
             }
         }
         return layout
@@ -60,19 +52,13 @@ class HomeViewController: BaseViewController {
         collectionView.dataSource = self
         collectionView.contentInsetAdjustmentBehavior = .scrollableAxes
     }
-
+    
     private func openOrderSummaryViewController() {
         let orderSummaryViewController = OrderSummaryViewController.instantiate(from: .main)
-        
-//        if let sheet = orderSummaryViewController.sheetPresentationController {
-//            sheet.detents = [.medium(), .large()]
-//            // your sheet setup
-//        }
-        
+        orderSummaryViewController.orderSummaryControllerDelegate = self
         orderSummaryViewController.modalPresentationStyle = .overCurrentContext
         present(orderSummaryViewController, animated: true, completion: nil)
     }
-
     
     // MARK: - Internal Methods
     func setupHorizontalScrollSection() -> NSCollectionLayoutSection {
@@ -107,6 +93,11 @@ class HomeViewController: BaseViewController {
         section.boundarySupplementaryItems = [headerView, footerView]
         return section
     }
+    
+    func openCheckoutViewController() {
+        let checkoutViewController = CheckoutViewController.instantiate(from: .main)
+        navigationController?.pushViewController(checkoutViewController, animated: true)
+    }
 }
 
 // MARK: - Extention for confroming UICollectionViewDataSource
@@ -124,7 +115,7 @@ extension HomeViewController: UICollectionViewDataSource {
         case .verticalScroll:
             return verticalItemListData.count
         case .none:
-            fatalError("Should not be none")
+            fatalError(LocalizedKey.noneError.string)
         }
     }
     
@@ -139,7 +130,7 @@ extension HomeViewController: UICollectionViewDataSource {
             cell.setCellData(with: verticalItemListData[indexPath.row])
             return cell
         case .none:
-            fatalError("Should not be none")
+            fatalError(LocalizedKey.noneError.string)
         }
     }
     
@@ -153,3 +144,4 @@ extension HomeViewController: UICollectionViewDataSource {
         }
     }
 }
+

@@ -8,7 +8,7 @@ class PromoCodeView: UIView {
     
     // MARK: - private Properties
     private let nibName = "PromoCodeView"
-        
+    
     // MARK: - Initializer Methods
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

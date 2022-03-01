@@ -7,6 +7,7 @@ enum LocalizedKey: String {
     var string: String { NSLocalizedString(self.rawValue, comment: "") }
     
     // MARK: - Enum Cases
+    case emptyString = ""
     case greetings = "Good afternoon,Miguel"
     case deliveryTitle = "Delivery to Door"
     case deliverDescription = "ASAP - 18 New Avenida SO, San"
@@ -60,6 +61,8 @@ enum LocalizedKey: String {
     case fiveDollar = "$5"
     case tenDollar = "$10"
     case otherDollar = "Other"
-    case sideMenuActionView = "SideMenuActionView"
     case orderSummary = "Order Summary"
+    case xibNotFoundError = "xib doesn't exist"
+    case noneError = "Should not be none"
+    case georgiaFont = "Georgia"
 }

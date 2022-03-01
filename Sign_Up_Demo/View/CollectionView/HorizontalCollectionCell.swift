@@ -14,7 +14,7 @@ class HorizontalCollectionCell: UICollectionViewCell {
         super.awakeFromNib()
         configureView()
     }
-        
+    
     // MARK: - Private Methods
     private func configureView() {
         innerView.layer.cornerRadius = 10
@@ -32,7 +32,7 @@ class HorizontalCollectionCell: UICollectionViewCell {
     func setItemSubtitle(with subTitle: String) {
         self.subTitle.text = subTitle
     }
-
+    
     func setItemImage(with imageName: String) {
         itemImage.image = UIImage(named: imageName)
     }

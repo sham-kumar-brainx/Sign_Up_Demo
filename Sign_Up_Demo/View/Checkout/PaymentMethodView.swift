@@ -9,7 +9,7 @@ class PaymentMethodView: UIView {
     
     // MARK: - private Properties
     private let nibName = "PaymentMethodView"
-        
+    
     // MARK: - Initializer Methods
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -26,7 +26,7 @@ class PaymentMethodView: UIView {
         view.frame = self.bounds
         self.addSubview(view)
     }
-
+    
     // MARK: - Lifecycle Methods
     func loadViewFromNib() -> UIView? {
         let bundle = Bundle(for: type(of: self))

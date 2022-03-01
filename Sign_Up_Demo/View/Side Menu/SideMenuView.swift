@@ -1,7 +1,7 @@
 import UIKit
 
 class SideMenuView: UIView {
-
+    
     //MARK: - Outlets
     @IBOutlet weak var shareButtonView: UIView!
     @IBOutlet weak var account: UILabel!

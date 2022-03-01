@@ -9,7 +9,7 @@ class PriceDisplayingView: UIView {
     
     // MARK: - private Properties
     private let nibName = "PriceDisplayingView"
-        
+    
     // MARK: - Initializer Methods
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

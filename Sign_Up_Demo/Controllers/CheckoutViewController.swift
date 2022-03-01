@@ -1,6 +1,6 @@
 import UIKit
 
-class CheckoutViewController: BaseViewController {
+class CheckoutViewController: BaseViewController, UIGestureRecognizerDelegate {
     
     // MARK: - Outlets
     @IBOutlet weak var checkoutView: CheckoutView!
@@ -12,6 +12,7 @@ class CheckoutViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureOnLoad()
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
     
     // MARK: - Action Methods
@@ -25,9 +26,6 @@ class CheckoutViewController: BaseViewController {
         isControllSwitchSelected = !isControllSwitchSelected
         checkoutView.toggleControlSwitch(shouldSelect: isControllSwitchSelected)
     }
-    
-    @IBAction
-    func tipsSegmentControlChanged(_ sender: Any) { }
     
     @objc
     func asapCheckBoxTapped(_ sender: UIGestureRecognizer) {

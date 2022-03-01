@@ -33,7 +33,7 @@ class PidenBienMainScreenView: UIView {
     private func customizeLabel(label: UILabel) {
         var mutableString = NSMutableAttributedString()
         let style = NSMutableParagraphStyle()
-        mutableString = NSMutableAttributedString(string: deliveryDescription.text ?? "", attributes: [NSAttributedString.Key.font: UIFont(name: "Georgia", size: 12.0)!])
+        mutableString = NSMutableAttributedString(string: deliveryDescription.text ?? LocalizedKey.emptyString.string, attributes: [NSAttributedString.Key.font: UIFont(name: LocalizedKey.georgiaFont.string, size: 12.0)])
         mutableString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.hexStringToUIColor(hex: AppConstants.darkBlueColorHex), range: NSRange(location: 0, length: 4))
         mutableString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.hexStringToUIColor(hex: AppConstants.LightBrownColorHex), range: NSRange(location: 4, length: mutableString.length - 4))
         label.attributedText = mutableString

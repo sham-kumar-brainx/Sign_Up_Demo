@@ -906,9 +906,6 @@
                                                                     <segment title="Other"/>
                                                                 </segments>
                                                                 <color key="selectedSegmentTintColor" red="0.098039215686274508" green="0.12156862745098039" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <connections>
-                                                                    <action selector="tipsSegmentControlChanged:" destination="6w2-db-4hT" eventType="valueChanged" id="Vle-Gn-GEh"/>
-                                                                </connections>
                                                             </segmentedControl>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
