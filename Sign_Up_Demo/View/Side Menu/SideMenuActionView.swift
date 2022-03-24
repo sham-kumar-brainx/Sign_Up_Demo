@@ -7,8 +7,8 @@ class SideMenuActionView: UIView {
     @IBOutlet var sideMenuView: UIView!
     
     // MARK: - private Properties
-    private let nibName = LocalizedKey.sideMenuActionView.string
-        
+    private let nibName = "SideMenuActionView"
+    
     // MARK: - Initializer Methods
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -41,6 +41,6 @@ class SideMenuActionView: UIView {
     
     // MARK: - Private Methods
     private func configureView() {
-        sideMenuView.addBottomBorderWithColor(color: UIColor.hexStringToUIColor(hex: AppConstants.lineColorHex), width: 1)
+        sideMenuView.addBottomBorderWithColor(color: UIColor.hexStringToUIColor(hex: AppConstants.lineColorHex), borderWidth: 1, width: CGFloat(AppConstants.sideMenuWidth))
     }
 }

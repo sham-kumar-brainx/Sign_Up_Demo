@@ -1,7 +1,7 @@
 import UIKit
 
 class HeaderCollectionReusableView: UICollectionReusableView {
-
+    
     // MARK: - Outlets
     @IBOutlet weak var label: UILabel!
     

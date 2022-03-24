@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dL-aK-CkU">
-                    <rect key="frame" x="20" y="81" width="36" height="17"/>
+                    <rect key="frame" x="20" y="81" width="239" height="17"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -35,6 +35,7 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="B9C-6L-LxQ"/>
             <constraints>
+                <constraint firstItem="Jmo-5g-MY5" firstAttribute="leading" secondItem="4dL-aK-CkU" secondAttribute="trailing" constant="8" id="Jyk-cY-seN"/>
                 <constraint firstItem="Jmo-5g-MY5" firstAttribute="centerY" secondItem="B9C-6L-LxQ" secondAttribute="centerY" id="Prf-oi-Dvr"/>
                 <constraint firstItem="B9C-6L-LxQ" firstAttribute="trailing" secondItem="Jmo-5g-MY5" secondAttribute="trailing" constant="16" id="ZQU-Ct-DI8"/>
                 <constraint firstItem="4dL-aK-CkU" firstAttribute="leading" secondItem="B9C-6L-LxQ" secondAttribute="leading" constant="19.91" id="nwp-Xr-rie"/>

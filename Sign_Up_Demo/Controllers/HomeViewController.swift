@@ -1,6 +1,6 @@
 import UIKit
 
-class HomeViewController: BaseViewController {
+class HomeViewController: BaseViewController, OrderSummaryViewControllerDelegate {
     
     // MARK: - Outlets
     @IBOutlet var pidebienMainScreenView: PidenBienMainScreenView!
@@ -18,7 +18,7 @@ class HomeViewController: BaseViewController {
             case .verticalScroll:
                 return self?.setupVerticalScrollSection()
             case .none:
-                fatalError("Should not be none")
+                fatalError(LocalizedKey.noneError.string)
             }
         }
         return layout
@@ -28,12 +28,18 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCollectionView()
+        pidebienMainScreenView.cartButtonView.addTapAction(#selector(cartButtonViewTapped(_:)),target: self)
     }
     
     // MARK: - Action Methods
     @IBAction
     func sideMenuImageTaped(_ sender: UIButton) {
         revealViewController()?.revealSideMenu()
+    }
+    
+    @objc
+    func cartButtonViewTapped(_ sender: UIGestureRecognizer) {
+        openOrderSummaryViewController()
     }
     
     // MARK: - Private Methods
@@ -45,6 +51,14 @@ class HomeViewController: BaseViewController {
         collectionView.collectionViewLayout = compositionalLayout
         collectionView.dataSource = self
         collectionView.contentInsetAdjustmentBehavior = .scrollableAxes
+    }
+    
+    private func openOrderSummaryViewController() {
+        let orderSummaryViewController = OrderSummaryViewController.instantiate(from: .main)
+        orderSummaryViewController.orderSummaryControllerDelegate = self
+        orderSummaryViewController.modalPresentationStyle = .overCurrentContext
+        orderSummaryViewController.modalTransitionStyle = .crossDissolve
+        present(orderSummaryViewController, animated: true, completion: nil)
     }
     
     // MARK: - Internal Methods
@@ -80,6 +94,15 @@ class HomeViewController: BaseViewController {
         section.boundarySupplementaryItems = [headerView, footerView]
         return section
     }
+    
+    func openCheckoutViewController() {
+        let checkoutViewController = CheckoutViewController.instantiate(from: .main)
+        navigationController?.pushViewController(checkoutViewController, animated: true)
+    }
+    
+    func removeBlurFromView() {
+        //        pidebienMainScreenView.removeBlurView()
+    }
 }
 
 // MARK: - Extention for confroming UICollectionViewDataSource
@@ -97,7 +120,7 @@ extension HomeViewController: UICollectionViewDataSource {
         case .verticalScroll:
             return verticalItemListData.count
         case .none:
-            fatalError("Should not be none")
+            fatalError(LocalizedKey.noneError.string)
         }
     }
     
@@ -112,7 +135,7 @@ extension HomeViewController: UICollectionViewDataSource {
             cell.setCellData(with: verticalItemListData[indexPath.row])
             return cell
         case .none:
-            fatalError("Should not be none")
+            fatalError(LocalizedKey.noneError.string)
         }
     }
     

@@ -2,6 +2,8 @@ import UIKit
 
 // MARK: - Protocol for SideMenuViewControllerDelegate
 protocol SideMenuViewControllerDelegate {
+    
+    // MARK: - Internal Methods
     func openSelectedTab(_ tab: SideMenuTabs)
 }
 
@@ -17,7 +19,7 @@ class SideMenuViewController: BaseViewController {
     // MARK: - Internal Properties
     var delegate: SideMenuViewControllerDelegate?
     var defaultSelectedTab: Int = 0
-
+    
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,11 +38,11 @@ class SideMenuViewController: BaseViewController {
         guard let index = sender.view?.tag else { return }
         delegate?.openSelectedTab(sideMenuTabs[index])
     }
-
+    
     // MARK: - Private Methods
     private func configureOnLoad(){
-        sideMenuView.homeTab.addTapAction(#selector(sideMenuActionTapped(_:)),target: self)
-        sideMenuView.myOrdersTab.addTapAction(#selector(sideMenuActionTapped(_:)),target: self)
+        sideMenuView.homeTab.addTapAction(#selector(sideMenuActionTapped(_:)), target: self)
+        sideMenuView.myOrdersTab.addTapAction(#selector(sideMenuActionTapped(_:)), target: self)
         sideMenuView.paymentTab.addTapAction(#selector(sideMenuActionTapped(_:)), target: self)
         sideMenuView.addressesTab.addTapAction(#selector(sideMenuActionTapped(_:)), target: self)
         sideMenuView.shopsTab.addTapAction(#selector(sideMenuActionTapped(_:)), target: self)

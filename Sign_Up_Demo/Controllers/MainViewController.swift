@@ -25,11 +25,9 @@ class MainViewController: BaseViewController, UIGestureRecognizerDelegate {
         setSideMenuShadowView()
         setTapGestureRecognizer()
         setPanGestureRecognizer()
-        if revealSideMenuOnTop {
-            view.insertSubview(sideMenuShadowView, at: 1)
-        }
         setSideMenuViewController()
         if revealSideMenuOnTop {
+            view.insertSubview(sideMenuShadowView, at: 1)
             sideMenuTrailingConstraint = sideMenuViewController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -sideMenuRevealWidth)
             sideMenuTrailingConstraint.isActive = true
         }

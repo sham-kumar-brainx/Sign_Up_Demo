@@ -10,10 +10,10 @@ extension UIView {
         addGestureRecognizer(tapGesture)
     }
     
-    func addBottomBorderWithColor(color: UIColor, width: CGFloat) {
+    func addBottomBorderWithColor(color: UIColor, borderWidth: CGFloat, width: CGFloat) {
         let border = CALayer()
         border.backgroundColor = color.cgColor
-        border.frame = CGRect(x: 0, y: self.frame.size.height - width, width: CGFloat(AppConstants.sideMenuWidth), height: width)
+        border.frame = CGRect(x: 0, y: self.frame.size.height - borderWidth, width: width, height: borderWidth)
         self.layer.addSublayer(border)
     }
 }

@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   // MARK: - Private Methods
   private func setRootViewController() {
     var viewController: BaseViewController
-    viewController =  SignUpViewController.instantiate(from: .main)
+    viewController = SignUpViewController.instantiate(from: .main)
     let navRootController = UINavigationController(rootViewController: viewController)
     navRootController.setNavigationBarHidden(true, animated: false)
     window?.rootViewController = navRootController
