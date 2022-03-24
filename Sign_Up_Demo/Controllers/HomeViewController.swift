@@ -3,6 +3,7 @@ import UIKit
 class HomeViewController: BaseViewController {
     
     // MARK: - Outlets
+    @IBOutlet var pidebienMainScreenView: PidenBienMainScreenView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Private Properties
@@ -27,6 +28,12 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCollectionView()
+    }
+    
+    // MARK: - Action Methods
+    @IBAction
+    func sideMenuImageTaped(_ sender: UIButton) {
+        revealViewController()?.revealSideMenu()
     }
     
     // MARK: - Private Methods
@@ -75,6 +82,7 @@ class HomeViewController: BaseViewController {
     }
 }
 
+// MARK: - Extention for confroming UICollectionViewDataSource
 extension HomeViewController: UICollectionViewDataSource {
     
     // MARK: - Internal Methods

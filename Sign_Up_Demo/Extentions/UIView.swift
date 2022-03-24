@@ -9,4 +9,11 @@ extension UIView {
         tapGesture.cancelsTouchesInView = false
         addGestureRecognizer(tapGesture)
     }
+    
+    func addBottomBorderWithColor(color: UIColor, width: CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x: 0, y: self.frame.size.height - width, width: CGFloat(AppConstants.sideMenuWidth), height: width)
+        self.layer.addSublayer(border)
+    }
 }
